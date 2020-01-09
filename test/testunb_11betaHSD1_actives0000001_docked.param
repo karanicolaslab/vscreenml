@@ -1,0 +1,113 @@
+#Interface settings
+
+#Execute Options :   
+    #-param (Not set, no default)
+    #-mpi_np (Not set, no default)
+    #-mpi_hostfile (Not set, no default)
+
+#Input Molecules :   
+    
+    #Input Files Option 1 : Input molecule and optional protein :   
+        -in  test/11betaHSD1_actives0000001_docked.oeb.gz
+        #-protein (Not set, no default)
+    
+    #Input Files Option 2 : Ligand-protein complex :   
+        #-complex (Not set, no default)
+    
+    #Molecule preparation :   
+        #-strip_water  false
+        #-largest_part  false
+
+#Output :   
+    
+    #Screen Options :   
+        #-silent  false
+        #-verbose  false
+    
+    #Output File Options :   
+        -prefix  testunb_11betaHSD1_actives0000001_docked
+        #-report  false
+        #-sdtag (Not set, no default)
+        #-keepFailures  false
+        #-heavy_rms  false
+    
+    #Explicitly specify individual file names :   
+        #-log (Not set, no default)
+        #-out  szybki_out.oeb
+        #-out_protein (Not set, no default)
+        #-out_complex (Not set, no default)
+        #-reportFile (Not set, no default)
+
+#Potential Function :   
+    #-ff (Not set, no default)
+    
+    #Charging :   
+        #-am1bcc  false
+        #-current_charges  false
+    
+    #Force Field Modifications :   
+        #-exact_vdw  false
+        #-mod_vdw  false
+        #-neglect_frozen  false
+        #-noCoulomb  false
+        #-protein_vdw  18.0
+        -strict  false
+        #-vdw_cutoff (Not set, no default)
+    
+    #Ligand solvent flags (used when -protein or -complex are not specified) :   
+        #-inner_dielectric  1.0
+        #-shefA (Not set, no default)
+        #-shefB (Not set, no default)
+        -sheffield  true
+        #-solv_dielectric (Not set, no default)
+        #-solventCA (Not set, no default)
+        #-solventPB  false
+    
+    #Complex solvent flags (used when -protein or -complex are specified) :   
+        #-protein_elec  ExactCoulomb
+    
+    #PB parameters :   
+        #-radii  Bondi
+        #-salt  0.0
+    
+    #Saving and Loading Coulombic Grids :   
+        #-loadPG (Not set, no default)
+        #-savePG (Not set, no default)
+
+#Optimization :   
+    #-optGeometry  calculationDependent
+    
+    #Convergence Criteria :   
+        #-grad_conv (Not set, no default)
+        #-max_iter  1000
+        #-optMethod (Not set, no default)
+    
+    #Fixing Ligand Atoms (fixed atoms won't move during optimization) :   
+        #-fix_file (Not set, no default)
+        #-fix_smarts (Not set, no default)
+        #-flex_file (Not set, no default)
+    
+    #Constraining Ligand Atoms (can move but have harmonic constraint) :   
+        #-harm_constr1  0.0
+        #-harm_constr2  0.0
+        #-harm_smarts (Not set, no default)
+    
+    #Constraining Torsion Angles :   
+        #-tor_constr (Not set, no default)
+    
+    #Protein Flexibility :   
+        #-flexdist (Not set, no default)
+        #-flexlist (Not set, no default)
+        #-flextype (Not set, no default)
+
+#Entropy Calculation :   
+    -entropy  AN
+    #-t  25.0
+
+#Deprecated :   
+    #-MMFF94S  false
+    #-polarH (Not set, no default)
+    #-residue (Not set, no default)
+    #-rws  false
+    #-sfp  6.0
+    #-sideC (Not set, no default)

@@ -1,0 +1,4667 @@
+#Interface settings
+
+#Input Molecules :   
+    
+    #Input Files Option 1 : Input molecule and optional protein :   
+        -in  test/11betaHSD1_actives0000001_docked.oeb.gz
+
+#Output :   
+    
+    #Output File Options :   
+        -prefix  testunb_11betaHSD1_actives0000001_docked
+
+#Potential Function :   
+    
+    #Force Field Modifications :   
+        -strict  false
+    
+    #Ligand solvent flags (used when -protein or -complex are not specified) :   
+        -sheffield  true
+
+#Entropy Calculation :   
+    -entropy  AN
+
+Units: [energy]      = [kcal/mol]
+       [gradient]    = [kcal/(mol*A)]
+       [RMSD]        = [A]
+       [cpu_time]    = [s]
+       [temperature] = [K]
+       [entropy]     = [J/(mol K)]
+       [S*T]         = [kcal/mol]
+       [DeltaS*T]    = [kcal/mol]
+
+MMFF94
+
+
+*******************************************************************
+Molecule test/mini_complex_11betaHSD1_actives0000001_docked_lig.pdb, 61 atoms
+
+Entropy data for an ensemble of  140 unique conformations/poses
+  configurational Vibrot entropy     6.10e+02
+  configurational Transl entropy     1.55625e+02
+                                     --------
+Total configurational entropy        7.66e+02
+Solvation entropy                   -2.73466e+02
+                                     --------
+Estimated total entropy S            4.92e+02  J/(mol K)
+At T=298.15 K, entropic free energy (T*S) 35.1 kcal/mol
+
+
+Conformer    0
+  Optimized in  211 cycles; optimization information:
+    Initial:  opt_function=  1.52492e+01 ;  rms_gradient=  3.388e+00
+    Final:    opt_function=  1.07141e+01 ;  rms_gradient=  3.093e-07
+    Displacement from initial geom:   RMSD= 0.41791 ; Max displ= 1.00669
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.21e+02
+    Rotational entropy                  1.49927e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.26e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.83871
+    MMFF Coulomb                      -46.51636
+    MMFF Bond                           7.19175
+    MMFF Bend                          27.08836
+    MMFF StretchBend                   -0.34263
+    MMFF Torsion                        2.91424
+    MMFF Improper Torsion              -0.83019
+                                     ----------
+    Ligand MMFF Intramol. Energy       26.34388
+ Other energy terms:
+    Sheffield Solvation               -15.62982
+  ================================================================
+  Total energy                         10.71406 kcal/mol
+
+  Conformer free energy wrt ensemble       1.61 kcal/mol
+==================================================================
+
+
+Conformer    1
+  Optimized in  213 cycles; optimization information:
+    Initial:  opt_function=  1.54222e+01 ;  rms_gradient=  3.394e+00
+    Final:    opt_function=  1.09463e+01 ;  rms_gradient=  8.056e-08
+    Displacement from initial geom:   RMSD= 0.44377 ; Max displ= 1.07933
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.21e+02
+    Rotational entropy                  1.50243e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.26e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           37.00175
+    MMFF Coulomb                      -46.43296
+    MMFF Bond                           7.17336
+    MMFF Bend                          27.11266
+    MMFF StretchBend                   -0.31536
+    MMFF Torsion                        2.83274
+    MMFF Improper Torsion              -0.78498
+                                     ----------
+    Ligand MMFF Intramol. Energy       26.58721
+ Other energy terms:
+    Sheffield Solvation               -15.64088
+  ================================================================
+  Total energy                         10.94633 kcal/mol
+
+  Conformer free energy wrt ensemble       1.83 kcal/mol
+==================================================================
+
+
+Conformer    2
+  Optimized in  213 cycles; optimization information:
+    Initial:  opt_function=  1.75147e+01 ;  rms_gradient=  3.306e+00
+    Final:    opt_function=  1.40502e+01 ;  rms_gradient=  9.180e-08
+    Displacement from initial geom:   RMSD= 0.24258 ; Max displ= 0.52723
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.34e+02
+    Rotational entropy                  1.50165e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.40e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.21027
+    MMFF Coulomb                      -38.23713
+    MMFF Bond                           7.08236
+    MMFF Bend                          27.34304
+    MMFF StretchBend                   -0.34799
+    MMFF Torsion                        2.73612
+    MMFF Improper Torsion              -0.88155
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.90513
+ Other energy terms:
+    Sheffield Solvation               -19.85491
+  ================================================================
+  Total energy                         14.05022 kcal/mol
+
+  Conformer free energy wrt ensemble       3.87 kcal/mol
+==================================================================
+
+
+Conformer    3
+  Optimized in  221 cycles; optimization information:
+    Initial:  opt_function=  1.59129e+01 ;  rms_gradient=  3.420e+00
+    Final:    opt_function=  1.08103e+01 ;  rms_gradient=  1.150e-07
+    Displacement from initial geom:   RMSD= 0.55952 ; Max displ= 0.96441
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.21e+02
+    Rotational entropy                  1.49707e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.26e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.43632
+    MMFF Coulomb                      -46.40379
+    MMFF Bond                           7.15359
+    MMFF Bend                          27.20107
+    MMFF StretchBend                   -0.35259
+    MMFF Torsion                        3.15023
+    MMFF Improper Torsion              -0.75188
+                                     ----------
+    Ligand MMFF Intramol. Energy       26.43295
+ Other energy terms:
+    Sheffield Solvation               -15.62263
+  ================================================================
+  Total energy                         10.81031 kcal/mol
+
+  Conformer free energy wrt ensemble       1.75 kcal/mol
+==================================================================
+
+
+Conformer    4
+  Optimized in  216 cycles; optimization information:
+    Initial:  opt_function=  1.75958e+01 ;  rms_gradient=  3.311e+00
+    Final:    opt_function=  1.41273e+01 ;  rms_gradient=  1.084e-07
+    Displacement from initial geom:   RMSD= 0.23509 ; Max displ= 0.47994
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.34e+02
+    Rotational entropy                  1.50430e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.40e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.29157
+    MMFF Coulomb                      -38.24403
+    MMFF Bond                           7.07784
+    MMFF Bend                          27.35065
+    MMFF StretchBend                   -0.31928
+    MMFF Torsion                        2.66553
+    MMFF Improper Torsion              -0.84603
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.97625
+ Other energy terms:
+    Sheffield Solvation               -19.84892
+  ================================================================
+  Total energy                         14.12733 kcal/mol
+
+  Conformer free energy wrt ensemble       3.97 kcal/mol
+==================================================================
+
+
+Conformer    6
+  Optimized in  215 cycles; optimization information:
+    Initial:  opt_function=  1.60741e+01 ;  rms_gradient=  3.428e+00
+    Final:    opt_function=  1.10291e+01 ;  rms_gradient=  2.598e-07
+    Displacement from initial geom:   RMSD= 0.54691 ; Max displ= 0.88886
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.20e+02
+    Rotational entropy                  1.49967e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.26e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.58875
+    MMFF Coulomb                      -46.31106
+    MMFF Bond                           7.13660
+    MMFF Bend                          27.21954
+    MMFF StretchBend                   -0.32519
+    MMFF Torsion                        3.07023
+    MMFF Improper Torsion              -0.71274
+                                     ----------
+    Ligand MMFF Intramol. Energy       26.66615
+ Other energy terms:
+    Sheffield Solvation               -15.63706
+  ================================================================
+  Total energy                         11.02908 kcal/mol
+
+  Conformer free energy wrt ensemble       1.99 kcal/mol
+==================================================================
+
+
+Conformer    9
+  Optimized in  229 cycles; optimization information:
+    Initial:  opt_function=  1.78425e+01 ;  rms_gradient=  3.367e+00
+    Final:    opt_function=  1.38682e+01 ;  rms_gradient=  6.788e-07
+    Displacement from initial geom:   RMSD= 0.50625 ; Max displ= 0.82309
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.30e+02
+    Rotational entropy                  1.49826e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.35e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.90102
+    MMFF Coulomb                      -38.36602
+    MMFF Bond                           7.06362
+    MMFF Bend                          27.29322
+    MMFF StretchBend                   -0.34851
+    MMFF Torsion                        3.02288
+    MMFF Improper Torsion              -0.90741
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.65881
+ Other energy terms:
+    Sheffield Solvation               -19.79064
+  ================================================================
+  Total energy                         13.86817 kcal/mol
+
+  Conformer free energy wrt ensemble       4.12 kcal/mol
+==================================================================
+
+
+Conformer   14
+  Optimized in  234 cycles; optimization information:
+    Initial:  opt_function=  1.79237e+01 ;  rms_gradient=  3.373e+00
+    Final:    opt_function=  1.39463e+01 ;  rms_gradient=  4.139e-07
+    Displacement from initial geom:   RMSD= 0.54711 ; Max displ= 1.06836
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.29e+02
+    Rotational entropy                  1.50035e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.35e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.98268
+    MMFF Coulomb                      -38.37108
+    MMFF Bond                           7.05886
+    MMFF Bend                          27.30134
+    MMFF StretchBend                   -0.31972
+    MMFF Torsion                        2.95188
+    MMFF Improper Torsion              -0.87168
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.73228
+ Other energy terms:
+    Sheffield Solvation               -19.78599
+  ================================================================
+  Total energy                         13.94629 kcal/mol
+
+  Conformer free energy wrt ensemble       4.23 kcal/mol
+==================================================================
+
+
+Conformer   18
+  Optimized in  265 cycles; optimization information:
+    Initial:  opt_function=  1.63554e+01 ;  rms_gradient=  3.424e+00
+    Final:    opt_function=  1.14115e+01 ;  rms_gradient=  3.006e-07
+    Displacement from initial geom:   RMSD= 1.14704 ; Max displ= 2.01742
+    cpu time: 0.14000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.24e+02
+    Rotational entropy                  1.50199e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.29e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.67536
+    MMFF Coulomb                      -46.33946
+    MMFF Bond                           7.15468
+    MMFF Bend                          27.50803
+    MMFF StretchBend                   -0.32578
+    MMFF Torsion                        2.85932
+    MMFF Improper Torsion              -0.79320
+                                     ----------
+    Ligand MMFF Intramol. Energy       26.73896
+ Other energy terms:
+    Sheffield Solvation               -15.32748
+  ================================================================
+  Total energy                         11.41148 kcal/mol
+
+  Conformer free energy wrt ensemble       2.09 kcal/mol
+==================================================================
+
+
+Conformer   30
+  Optimized in  208 cycles; optimization information:
+    Initial:  opt_function=  1.79434e+01 ;  rms_gradient=  3.545e+00
+    Final:    opt_function=  1.17897e+01 ;  rms_gradient=  5.137e-08
+    Displacement from initial geom:   RMSD= 0.47495 ; Max displ= 1.14333
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.12e+02
+    Rotational entropy                  1.48596e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.16e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.55251
+    MMFF Coulomb                      -41.74504
+    MMFF Bond                           7.24446
+    MMFF Bend                          27.23728
+    MMFF StretchBend                   -0.30517
+    MMFF Torsion                        3.04220
+    MMFF Improper Torsion              -1.05703
+                                     ----------
+    Ligand MMFF Intramol. Energy       29.96921
+ Other energy terms:
+    Sheffield Solvation               -18.17949
+  ================================================================
+  Total energy                         11.78972 kcal/mol
+
+  Conformer free energy wrt ensemble       3.60 kcal/mol
+==================================================================
+
+
+Conformer   31
+  Optimized in  217 cycles; optimization information:
+    Initial:  opt_function=  1.64899e+01 ;  rms_gradient=  3.462e+00
+    Final:    opt_function=  1.11212e+01 ;  rms_gradient=  1.419e-07
+    Displacement from initial geom:   RMSD= 0.49001 ; Max displ= 0.74895
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.24e+02
+    Rotational entropy                  1.50133e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.30e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.95726
+    MMFF Coulomb                      -46.58198
+    MMFF Bond                           7.21849
+    MMFF Bend                          27.37365
+    MMFF StretchBend                   -0.34480
+    MMFF Torsion                        2.70249
+    MMFF Improper Torsion              -0.89775
+                                     ----------
+    Ligand MMFF Intramol. Energy       26.42736
+ Other energy terms:
+    Sheffield Solvation               -15.30619
+  ================================================================
+  Total energy                         11.12117 kcal/mol
+
+  Conformer free energy wrt ensemble       1.74 kcal/mol
+==================================================================
+
+
+Conformer   33
+  Optimized in  234 cycles; optimization information:
+    Initial:  opt_function=  1.71539e+01 ;  rms_gradient=  3.709e+00
+    Final:    opt_function=  1.14431e+01 ;  rms_gradient=  3.719e-07
+    Displacement from initial geom:   RMSD= 0.70562 ; Max displ= 1.58492
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.16e+02
+    Rotational entropy                  1.48799e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.21e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.02028
+    MMFF Coulomb                      -43.76782
+    MMFF Bond                           7.28488
+    MMFF Bend                          28.01050
+    MMFF StretchBend                   -0.37015
+    MMFF Torsion                        1.49759
+    MMFF Improper Torsion              -0.77034
+                                     ----------
+    Ligand MMFF Intramol. Energy       27.90495
+ Other energy terms:
+    Sheffield Solvation               -16.46184
+  ================================================================
+  Total energy                         11.44311 kcal/mol
+
+  Conformer free energy wrt ensemble       2.77 kcal/mol
+==================================================================
+
+
+Conformer   38
+  Optimized in  249 cycles; optimization information:
+    Initial:  opt_function=  1.80717e+01 ;  rms_gradient=  3.544e+00
+    Final:    opt_function=  1.21383e+01 ;  rms_gradient=  4.240e-07
+    Displacement from initial geom:   RMSD= 0.50410 ; Max displ= 1.03377
+    cpu time: 0.14000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.20e+02
+    Rotational entropy                  1.48578e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.24e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           34.84727
+    MMFF Coulomb                      -42.12754
+    MMFF Bond                           7.06677
+    MMFF Bend                          27.77927
+    MMFF StretchBend                   -0.32761
+    MMFF Torsion                        3.10057
+    MMFF Improper Torsion              -0.92358
+                                     ----------
+    Ligand MMFF Intramol. Energy       29.41517
+ Other energy terms:
+    Sheffield Solvation               -17.27687
+  ================================================================
+  Total energy                         12.13829 kcal/mol
+
+  Conformer free energy wrt ensemble       3.27 kcal/mol
+==================================================================
+
+
+Conformer   40
+  Optimized in  270 cycles; optimization information:
+    Initial:  opt_function=  1.66423e+01 ;  rms_gradient=  3.416e+00
+    Final:    opt_function=  1.13417e+01 ;  rms_gradient=  3.417e-07
+    Displacement from initial geom:   RMSD= 1.16633 ; Max displ= 1.86444
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.23e+02
+    Rotational entropy                  1.50485e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.30e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           37.10444
+    MMFF Coulomb                      -46.48340
+    MMFF Bond                           7.19503
+    MMFF Bend                          27.40365
+    MMFF StretchBend                   -0.31509
+    MMFF Torsion                        2.62244
+    MMFF Improper Torsion              -0.85870
+                                     ----------
+    Ligand MMFF Intramol. Energy       26.66837
+ Other energy terms:
+    Sheffield Solvation               -15.32666
+  ================================================================
+  Total energy                         11.34171 kcal/mol
+
+  Conformer free energy wrt ensemble       1.96 kcal/mol
+==================================================================
+
+
+Conformer   41
+  Optimized in  215 cycles; optimization information:
+    Initial:  opt_function=  1.66288e+01 ;  rms_gradient=  3.470e+00
+    Final:    opt_function=  1.12048e+01 ;  rms_gradient=  1.478e-07
+    Displacement from initial geom:   RMSD= 0.46121 ; Max displ= 0.77586
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.24e+02
+    Rotational entropy                  1.49904e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.30e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.53836
+    MMFF Coulomb                      -46.44728
+    MMFF Bond                           7.17629
+    MMFF Bend                          27.48640
+    MMFF StretchBend                   -0.35545
+    MMFF Torsion                        2.93601
+    MMFF Improper Torsion              -0.82569
+                                     ----------
+    Ligand MMFF Intramol. Energy       26.50865
+ Other energy terms:
+    Sheffield Solvation               -15.30387
+  ================================================================
+  Total energy                         11.20478 kcal/mol
+
+  Conformer free energy wrt ensemble       1.86 kcal/mol
+==================================================================
+
+
+Conformer   42
+  Optimized in  224 cycles; optimization information:
+    Initial:  opt_function=  1.66333e+01 ;  rms_gradient=  3.468e+00
+    Final:    opt_function=  1.13417e+01 ;  rms_gradient=  5.302e-07
+    Displacement from initial geom:   RMSD= 0.55170 ; Max displ= 1.09619
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.23e+02
+    Rotational entropy                  1.50485e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.30e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           37.10444
+    MMFF Coulomb                      -46.48340
+    MMFF Bond                           7.19503
+    MMFF Bend                          27.40365
+    MMFF StretchBend                   -0.31509
+    MMFF Torsion                        2.62244
+    MMFF Improper Torsion              -0.85870
+                                     ----------
+    Ligand MMFF Intramol. Energy       26.66837
+ Other energy terms:
+    Sheffield Solvation               -15.32666
+  ================================================================
+  Total energy                         11.34171 kcal/mol
+
+  Conformer free energy wrt ensemble       1.96 kcal/mol
+==================================================================
+
+
+Conformer   43
+  Optimized in  296 cycles; optimization information:
+    Initial:  opt_function=  1.92011e+01 ;  rms_gradient=  3.336e+00
+    Final:    opt_function=  1.18018e+01 ;  rms_gradient=  1.119e-06
+    Displacement from initial geom:   RMSD= 1.70189 ; Max displ= 3.45398
+    cpu time: 0.14000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.14e+02
+    Rotational entropy                  1.48706e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.18e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.64812
+    MMFF Coulomb                      -41.25812
+    MMFF Bond                           7.18612
+    MMFF Bend                          27.41202
+    MMFF StretchBend                   -0.30501
+    MMFF Torsion                        2.05796
+    MMFF Improper Torsion              -0.94926
+                                     ----------
+    Ligand MMFF Intramol. Energy       29.79183
+ Other energy terms:
+    Sheffield Solvation               -17.99005
+  ================================================================
+  Total energy                         11.80178 kcal/mol
+
+  Conformer free energy wrt ensemble       3.33 kcal/mol
+==================================================================
+
+
+Conformer   44
+  Optimized in  212 cycles; optimization information:
+    Initial:  opt_function=  1.82881e+01 ;  rms_gradient=  3.435e+00
+    Final:    opt_function=  1.39143e+01 ;  rms_gradient=  1.187e-07
+    Displacement from initial geom:   RMSD= 0.26113 ; Max displ= 0.57573
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.33e+02
+    Rotational entropy                  1.50067e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.38e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.08706
+    MMFF Coulomb                      -37.84469
+    MMFF Bond                           7.08125
+    MMFF Bend                          27.30587
+    MMFF StretchBend                   -0.34021
+    MMFF Torsion                        2.70030
+    MMFF Improper Torsion              -0.83267
+                                     ----------
+    Ligand MMFF Intramol. Energy       34.15691
+ Other energy terms:
+    Sheffield Solvation               -20.24256
+  ================================================================
+  Total energy                         13.91434 kcal/mol
+
+  Conformer free energy wrt ensemble       3.89 kcal/mol
+==================================================================
+
+
+Conformer   47
+  Optimized in  290 cycles; optimization information:
+    Initial:  opt_function=  1.92399e+01 ;  rms_gradient=  3.338e+00
+    Final:    opt_function=  1.28872e+01 ;  rms_gradient=  9.433e-08
+    Displacement from initial geom:   RMSD= 1.13691 ; Max displ= 2.20528
+    cpu time: 0.14000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.13e+02
+    Rotational entropy                  1.48318e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.17e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.47817
+    MMFF Coulomb                      -40.25419
+    MMFF Bond                           7.27167
+    MMFF Bend                          27.64193
+    MMFF StretchBend                   -0.29459
+    MMFF Torsion                        3.01576
+    MMFF Improper Torsion              -1.16451
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.69423
+ Other energy terms:
+    Sheffield Solvation               -18.80700
+  ================================================================
+  Total energy                         12.88724 kcal/mol
+
+  Conformer free energy wrt ensemble       4.50 kcal/mol
+==================================================================
+
+
+Conformer   54
+  Optimized in  218 cycles; optimization information:
+    Initial:  opt_function=  1.83829e+01 ;  rms_gradient=  3.443e+00
+    Final:    opt_function=  1.40008e+01 ;  rms_gradient=  4.320e-07
+    Displacement from initial geom:   RMSD= 0.28659 ; Max displ= 0.53404
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.32e+02
+    Rotational entropy                  1.50324e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.38e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.17662
+    MMFF Coulomb                      -37.83863
+    MMFF Bond                           7.07741
+    MMFF Bend                          27.31245
+    MMFF StretchBend                   -0.31200
+    MMFF Torsion                        2.62606
+    MMFF Improper Torsion              -0.79305
+                                     ----------
+    Ligand MMFF Intramol. Energy       34.24886
+ Other energy terms:
+    Sheffield Solvation               -20.24802
+  ================================================================
+  Total energy                         14.00083 kcal/mol
+
+  Conformer free energy wrt ensemble       4.00 kcal/mol
+==================================================================
+
+
+Conformer   57
+  Optimized in  220 cycles; optimization information:
+    Initial:  opt_function=  1.67699e+01 ;  rms_gradient=  3.476e+00
+    Final:    opt_function=  1.14115e+01 ;  rms_gradient=  1.110e-07
+    Displacement from initial geom:   RMSD= 0.51464 ; Max displ= 1.03176
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.24e+02
+    Rotational entropy                  1.50199e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.29e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.67536
+    MMFF Coulomb                      -46.33946
+    MMFF Bond                           7.15468
+    MMFF Bend                          27.50803
+    MMFF StretchBend                   -0.32578
+    MMFF Torsion                        2.85932
+    MMFF Improper Torsion              -0.79320
+                                     ----------
+    Ligand MMFF Intramol. Energy       26.73896
+ Other energy terms:
+    Sheffield Solvation               -15.32748
+  ================================================================
+  Total energy                         11.41148 kcal/mol
+
+  Conformer free energy wrt ensemble       2.09 kcal/mol
+==================================================================
+
+
+Conformer   58
+  Optimized in  216 cycles; optimization information:
+    Initial:  opt_function=  1.81173e+01 ;  rms_gradient=  3.309e+00
+    Final:    opt_function=  1.37002e+01 ;  rms_gradient=  2.925e-07
+    Displacement from initial geom:   RMSD= 0.32271 ; Max displ= 0.57888
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.32e+02
+    Rotational entropy                  1.50412e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.38e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.01784
+    MMFF Coulomb                      -39.94553
+    MMFF Bond                           7.07632
+    MMFF Bend                          27.03050
+    MMFF StretchBend                   -0.35853
+    MMFF Torsion                        3.11014
+    MMFF Improper Torsion              -0.88976
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.04098
+ Other energy terms:
+    Sheffield Solvation               -18.34077
+  ================================================================
+  Total energy                         13.70021 kcal/mol
+
+  Conformer free energy wrt ensemble       3.75 kcal/mol
+==================================================================
+
+
+Conformer   59
+  Optimized in  221 cycles; optimization information:
+    Initial:  opt_function=  1.81002e+01 ;  rms_gradient=  3.326e+00
+    Final:    opt_function=  1.36340e+01 ;  rms_gradient=  7.598e-08
+    Displacement from initial geom:   RMSD= 0.29579 ; Max displ= 0.55436
+    cpu time: 0.15000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.30e+02
+    Rotational entropy                  1.50406e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.36e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.97045
+    MMFF Coulomb                      -38.94257
+    MMFF Bond                           7.07440
+    MMFF Bend                          27.02005
+    MMFF StretchBend                   -0.35044
+    MMFF Torsion                        3.06165
+    MMFF Improper Torsion              -0.84423
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.98931
+ Other energy terms:
+    Sheffield Solvation               -19.35531
+  ================================================================
+  Total energy                         13.63400 kcal/mol
+
+  Conformer free energy wrt ensemble       3.81 kcal/mol
+==================================================================
+
+
+Conformer   60
+  Optimized in  213 cycles; optimization information:
+    Initial:  opt_function=  1.84230e+01 ;  rms_gradient=  3.443e+00
+    Final:    opt_function=  1.37495e+01 ;  rms_gradient=  1.192e-07
+    Displacement from initial geom:   RMSD= 0.33454 ; Max displ= 0.55925
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.28e+02
+    Rotational entropy                  1.49704e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.33e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.78174
+    MMFF Coulomb                      -37.91951
+    MMFF Bond                           7.06028
+    MMFF Bend                          27.25878
+    MMFF StretchBend                   -0.33937
+    MMFF Torsion                        2.97700
+    MMFF Improper Torsion              -0.84991
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.96902
+ Other energy terms:
+    Sheffield Solvation               -20.21947
+  ================================================================
+  Total energy                         13.74955 kcal/mol
+
+  Conformer free energy wrt ensemble       4.16 kcal/mol
+==================================================================
+
+
+Conformer   69
+  Optimized in  221 cycles; optimization information:
+    Initial:  opt_function=  1.82218e+01 ;  rms_gradient=  3.318e+00
+    Final:    opt_function=  1.37932e+01 ;  rms_gradient=  2.255e-07
+    Displacement from initial geom:   RMSD= 0.42344 ; Max displ= 0.72939
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.31e+02
+    Rotational entropy                  1.50623e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.38e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.11092
+    MMFF Coulomb                      -39.93957
+    MMFF Bond                           7.07107
+    MMFF Bend                          27.03850
+    MMFF StretchBend                   -0.32887
+    MMFF Torsion                        3.04033
+    MMFF Improper Torsion              -0.85258
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.13980
+ Other energy terms:
+    Sheffield Solvation               -18.34660
+  ================================================================
+  Total energy                         13.79320 kcal/mol
+
+  Conformer free energy wrt ensemble       3.87 kcal/mol
+==================================================================
+
+
+Conformer   70
+  Optimized in  226 cycles; optimization information:
+    Initial:  opt_function=  1.85180e+01 ;  rms_gradient=  3.451e+00
+    Final:    opt_function=  1.38367e+01 ;  rms_gradient=  6.941e-08
+    Displacement from initial geom:   RMSD= 0.35779 ; Max displ= 0.60054
+    cpu time: 0.15000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.27e+02
+    Rotational entropy                  1.49904e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.33e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.87154
+    MMFF Coulomb                      -37.91390
+    MMFF Bond                           7.05630
+    MMFF Bend                          27.26612
+    MMFF StretchBend                   -0.31110
+    MMFF Torsion                        2.90253
+    MMFF Improper Torsion              -0.81042
+                                     ----------
+    Ligand MMFF Intramol. Energy       34.06107
+ Other energy terms:
+    Sheffield Solvation               -20.22439
+  ================================================================
+  Total energy                         13.83668 kcal/mol
+
+  Conformer free energy wrt ensemble       4.27 kcal/mol
+==================================================================
+
+
+Conformer   71
+  Optimized in  237 cycles; optimization information:
+    Initial:  opt_function=  1.81987e+01 ;  rms_gradient=  3.335e+00
+    Final:    opt_function=  1.37214e+01 ;  rms_gradient=  1.549e-07
+    Displacement from initial geom:   RMSD= 0.37749 ; Max displ= 0.64813
+    cpu time: 0.16000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.30e+02
+    Rotational entropy                  1.50538e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.36e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.05975
+    MMFF Coulomb                      -38.93695
+    MMFF Bond                           7.07090
+    MMFF Bend                          27.02634
+    MMFF StretchBend                   -0.32206
+    MMFF Torsion                        2.98916
+    MMFF Improper Torsion              -0.80503
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.08211
+ Other energy terms:
+    Sheffield Solvation               -19.36067
+  ================================================================
+  Total energy                         13.72144 kcal/mol
+
+  Conformer free energy wrt ensemble       3.92 kcal/mol
+==================================================================
+
+
+Conformer   77
+  Optimized in  234 cycles; optimization information:
+    Initial:  opt_function=  1.75595e+01 ;  rms_gradient=  3.734e+00
+    Final:    opt_function=  1.16918e+01 ;  rms_gradient=  5.015e-07
+    Displacement from initial geom:   RMSD= 0.93428 ; Max displ= 1.81427
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.24e+02
+    Rotational entropy                  1.49110e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.29e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.07189
+    MMFF Coulomb                      -43.37462
+    MMFF Bond                           7.28858
+    MMFF Bend                          27.83673
+    MMFF StretchBend                   -0.34350
+    MMFF Torsion                        1.43354
+    MMFF Improper Torsion              -0.75302
+                                     ----------
+    Ligand MMFF Intramol. Energy       28.15960
+ Other energy terms:
+    Sheffield Solvation               -16.46778
+  ================================================================
+  Total energy                         11.69182 kcal/mol
+
+  Conformer free energy wrt ensemble       2.34 kcal/mol
+==================================================================
+
+
+Conformer   78
+  Optimized in  258 cycles; optimization information:
+    Initial:  opt_function=  1.86124e+01 ;  rms_gradient=  3.582e+00
+    Final:    opt_function=  1.21383e+01 ;  rms_gradient=  1.025e-07
+    Displacement from initial geom:   RMSD= 0.52808 ; Max displ= 1.20554
+    cpu time: 0.18000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.20e+02
+    Rotational entropy                  1.48578e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.24e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           34.84727
+    MMFF Coulomb                      -42.12754
+    MMFF Bond                           7.06677
+    MMFF Bend                          27.77927
+    MMFF StretchBend                   -0.32761
+    MMFF Torsion                        3.10057
+    MMFF Improper Torsion              -0.92358
+                                     ----------
+    Ligand MMFF Intramol. Energy       29.41517
+ Other energy terms:
+    Sheffield Solvation               -17.27687
+  ================================================================
+  Total energy                         12.13829 kcal/mol
+
+  Conformer free energy wrt ensemble       3.27 kcal/mol
+==================================================================
+
+
+Conformer   79
+  Optimized in  233 cycles; optimization information:
+    Initial:  opt_function=  1.75686e+01 ;  rms_gradient=  3.713e+00
+    Final:    opt_function=  1.12813e+01 ;  rms_gradient=  7.243e-08
+    Displacement from initial geom:   RMSD= 0.90479 ; Max displ= 1.84585
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.16e+02
+    Rotational entropy                  1.48716e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.21e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.61398
+    MMFF Coulomb                      -42.89018
+    MMFF Bond                           7.25078
+    MMFF Bend                          28.15797
+    MMFF StretchBend                   -0.32252
+    MMFF Torsion                        1.18314
+    MMFF Improper Torsion              -0.94527
+                                     ----------
+    Ligand MMFF Intramol. Energy       28.04791
+ Other energy terms:
+    Sheffield Solvation               -16.76665
+  ================================================================
+  Total energy                         11.28126 kcal/mol
+
+  Conformer free energy wrt ensemble       2.58 kcal/mol
+==================================================================
+
+
+Conformer   81
+  Optimized in  198 cycles; optimization information:
+    Initial:  opt_function=  1.71563e+01 ;  rms_gradient=  3.841e+00
+    Final:    opt_function=  1.12729e+01 ;  rms_gradient=  3.112e-07
+    Displacement from initial geom:   RMSD= 0.29343 ; Max displ= 0.54112
+    cpu time: 0.10000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.16e+02
+    Rotational entropy                  1.48679e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.20e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.52594
+    MMFF Coulomb                      -43.37446
+    MMFF Bond                           7.28055
+    MMFF Bend                          27.98280
+    MMFF StretchBend                   -0.33281
+    MMFF Torsion                        1.24761
+    MMFF Improper Torsion              -0.96840
+                                     ----------
+    Ligand MMFF Intramol. Energy       27.36124
+ Other energy terms:
+    Sheffield Solvation               -16.08831
+  ================================================================
+  Total energy                         11.27293 kcal/mol
+
+  Conformer free energy wrt ensemble       2.59 kcal/mol
+==================================================================
+
+
+Conformer   83
+  Optimized in  226 cycles; optimization information:
+    Initial:  opt_function=  1.76135e+01 ;  rms_gradient=  3.389e+00
+    Final:    opt_function=  1.21753e+01 ;  rms_gradient=  8.128e-08
+    Displacement from initial geom:   RMSD= 0.50327 ; Max displ= 0.90276
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.31e+02
+    Rotational entropy                  1.49537e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.36e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.57755
+    MMFF Coulomb                      -42.77312
+    MMFF Bond                           7.03548
+    MMFF Bend                          27.60873
+    MMFF StretchBend                   -0.36478
+    MMFF Torsion                        2.70998
+    MMFF Improper Torsion              -0.80739
+                                     ----------
+    Ligand MMFF Intramol. Energy       28.98646
+ Other energy terms:
+    Sheffield Solvation               -16.81114
+  ================================================================
+  Total energy                         12.17532 kcal/mol
+
+  Conformer free energy wrt ensemble       2.29 kcal/mol
+==================================================================
+
+
+Conformer   86
+  Optimized in  212 cycles; optimization information:
+    Initial:  opt_function=  1.76271e+01 ;  rms_gradient=  3.402e+00
+    Final:    opt_function=  1.18848e+01 ;  rms_gradient=  3.111e-08
+    Displacement from initial geom:   RMSD= 0.44516 ; Max displ= 0.81693
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.21e+02
+    Rotational entropy                  1.49078e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.26e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.07590
+    MMFF Coulomb                      -42.84504
+    MMFF Bond                           7.00646
+    MMFF Bend                          27.66050
+    MMFF StretchBend                   -0.37544
+    MMFF Torsion                        3.04687
+    MMFF Improper Torsion              -0.86948
+                                     ----------
+    Ligand MMFF Intramol. Energy       28.69977
+ Other energy terms:
+    Sheffield Solvation               -16.81501
+  ================================================================
+  Total energy                         11.88477 kcal/mol
+
+  Conformer free energy wrt ensemble       2.84 kcal/mol
+==================================================================
+
+
+Conformer   88
+  Optimized in  229 cycles; optimization information:
+    Initial:  opt_function=  1.83155e+01 ;  rms_gradient=  3.351e+00
+    Final:    opt_function=  1.38888e+01 ;  rms_gradient=  3.839e-08
+    Displacement from initial geom:   RMSD= 0.27906 ; Max displ= 0.51308
+    cpu time: 0.16000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.35e+02
+    Rotational entropy                  1.50947e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.41e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.46292
+    MMFF Coulomb                      -38.99958
+    MMFF Bond                           7.09555
+    MMFF Bend                          27.03468
+    MMFF StretchBend                   -0.33569
+    MMFF Torsion                        2.81630
+    MMFF Improper Torsion              -0.84088
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.23330
+ Other energy terms:
+    Sheffield Solvation               -19.34454
+  ================================================================
+  Total energy                         13.88876 kcal/mol
+
+  Conformer free energy wrt ensemble       3.65 kcal/mol
+==================================================================
+
+
+Conformer   92
+  Optimized in  217 cycles; optimization information:
+    Initial:  opt_function=  1.83530e+01 ;  rms_gradient=  3.335e+00
+    Final:    opt_function=  1.39738e+01 ;  rms_gradient=  1.694e-07
+    Displacement from initial geom:   RMSD= 0.27023 ; Max displ= 0.54741
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.36e+02
+    Rotational entropy                  1.51114e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.43e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.53195
+    MMFF Coulomb                      -39.96264
+    MMFF Bond                           7.09714
+    MMFF Bend                          27.04924
+    MMFF StretchBend                   -0.34121
+    MMFF Torsion                        2.85910
+    MMFF Improper Torsion              -0.88811
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.34547
+ Other energy terms:
+    Sheffield Solvation               -18.37163
+  ================================================================
+  Total energy                         13.97384 kcal/mol
+
+  Conformer free energy wrt ensemble       3.61 kcal/mol
+==================================================================
+
+
+Conformer   95
+  Optimized in  219 cycles; optimization information:
+    Initial:  opt_function=  1.83835e+01 ;  rms_gradient=  3.496e+00
+    Final:    opt_function=  1.37973e+01 ;  rms_gradient=  1.974e-08
+    Displacement from initial geom:   RMSD= 0.42157 ; Max displ= 0.70555
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.30e+02
+    Rotational entropy                  1.50609e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.36e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.07028
+    MMFF Coulomb                      -38.86163
+    MMFF Bond                           7.07665
+    MMFF Bend                          27.02623
+    MMFF StretchBend                   -0.35105
+    MMFF Torsion                        3.04604
+    MMFF Improper Torsion              -0.84409
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.16242
+ Other energy terms:
+    Sheffield Solvation               -19.36514
+  ================================================================
+  Total energy                         13.79729 kcal/mol
+
+  Conformer free energy wrt ensemble       3.99 kcal/mol
+==================================================================
+
+
+Conformer   97
+  Optimized in  227 cycles; optimization information:
+    Initial:  opt_function=  1.78495e+01 ;  rms_gradient=  3.538e+00
+    Final:    opt_function=  1.22357e+01 ;  rms_gradient=  1.715e-07
+    Displacement from initial geom:   RMSD= 0.59959 ; Max displ= 0.91889
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.31e+02
+    Rotational entropy                  1.49582e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.36e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.64578
+    MMFF Coulomb                      -42.76743
+    MMFF Bond                           7.02966
+    MMFF Bend                          27.61919
+    MMFF StretchBend                   -0.33630
+    MMFF Torsion                        2.63808
+    MMFF Improper Torsion              -0.77356
+                                     ----------
+    Ligand MMFF Intramol. Energy       29.05542
+ Other energy terms:
+    Sheffield Solvation               -16.81971
+  ================================================================
+  Total energy                         12.23571 kcal/mol
+
+  Conformer free energy wrt ensemble       2.37 kcal/mol
+==================================================================
+
+
+Conformer   99
+  Optimized in  246 cycles; optimization information:
+    Initial:  opt_function=  1.86769e+01 ;  rms_gradient=  3.438e+00
+    Final:    opt_function=  1.41273e+01 ;  rms_gradient=  2.323e-07
+    Displacement from initial geom:   RMSD= 0.48663 ; Max displ= 1.11078
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.34e+02
+    Rotational entropy                  1.50430e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.40e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.29157
+    MMFF Coulomb                      -38.24403
+    MMFF Bond                           7.07784
+    MMFF Bend                          27.35065
+    MMFF StretchBend                   -0.31928
+    MMFF Torsion                        2.66553
+    MMFF Improper Torsion              -0.84603
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.97625
+ Other energy terms:
+    Sheffield Solvation               -19.84892
+  ================================================================
+  Total energy                         14.12733 kcal/mol
+
+  Conformer free energy wrt ensemble       3.97 kcal/mol
+==================================================================
+
+
+Conformer  106
+  Optimized in  218 cycles; optimization information:
+    Initial:  opt_function=  1.77073e+01 ;  rms_gradient=  3.413e+00
+    Final:    opt_function=  1.19386e+01 ;  rms_gradient=  2.577e-07
+    Displacement from initial geom:   RMSD= 0.50494 ; Max displ= 0.95925
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.21e+02
+    Rotational entropy                  1.49107e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.25e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.13764
+    MMFF Coulomb                      -42.83888
+    MMFF Bond                           7.00126
+    MMFF Bend                          27.66782
+    MMFF StretchBend                   -0.34676
+    MMFF Torsion                        2.97741
+    MMFF Improper Torsion              -0.83583
+                                     ----------
+    Ligand MMFF Intramol. Energy       28.76266
+ Other energy terms:
+    Sheffield Solvation               -16.82404
+  ================================================================
+  Total energy                         11.93862 kcal/mol
+
+  Conformer free energy wrt ensemble       2.92 kcal/mol
+==================================================================
+
+
+Conformer  107
+  Optimized in  213 cycles; optimization information:
+    Initial:  opt_function=  1.84507e+01 ;  rms_gradient=  3.615e+00
+    Final:    opt_function=  1.40050e+01 ;  rms_gradient=  2.697e-07
+    Displacement from initial geom:   RMSD= 0.27775 ; Max displ= 0.65349
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.35e+02
+    Rotational entropy                  1.50978e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.42e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.45736
+    MMFF Coulomb                      -38.81598
+    MMFF Bond                           7.09701
+    MMFF Bend                          27.07625
+    MMFF StretchBend                   -0.34850
+    MMFF Torsion                        2.76660
+    MMFF Improper Torsion              -0.82037
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.41237
+ Other energy terms:
+    Sheffield Solvation               -19.40740
+  ================================================================
+  Total energy                         14.00497 kcal/mol
+
+  Conformer free energy wrt ensemble       3.74 kcal/mol
+==================================================================
+
+
+Conformer  109
+  Optimized in  332 cycles; optimization information:
+    Initial:  opt_function=  1.96403e+01 ;  rms_gradient=  3.340e+00
+    Final:    opt_function=  1.32496e+01 ;  rms_gradient=  2.216e-07
+    Displacement from initial geom:   RMSD= 1.11485 ; Max displ= 2.19961
+    cpu time: 0.16000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.23e+02
+    Rotational entropy                  1.48432e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.27e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.63079
+    MMFF Coulomb                      -40.71943
+    MMFF Bond                           7.32139
+    MMFF Bend                          27.63047
+    MMFF StretchBend                   -0.29687
+    MMFF Torsion                        3.77540
+    MMFF Improper Torsion              -1.34081
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.00094
+ Other energy terms:
+    Sheffield Solvation               -18.75139
+  ================================================================
+  Total energy                         13.24955 kcal/mol
+
+  Conformer free energy wrt ensemble       4.19 kcal/mol
+==================================================================
+
+
+Conformer  111
+  Optimized in  209 cycles; optimization information:
+    Initial:  opt_function=  1.83206e+01 ;  rms_gradient=  3.498e+00
+    Final:    opt_function=  1.37714e+01 ;  rms_gradient=  1.077e-07
+    Displacement from initial geom:   RMSD= 0.34767 ; Max displ= 0.74264
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.32e+02
+    Rotational entropy                  1.50207e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.38e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.20190
+    MMFF Coulomb                      -39.65936
+    MMFF Bond                           7.07530
+    MMFF Bend                          27.02425
+    MMFF StretchBend                   -0.35796
+    MMFF Torsion                        3.13528
+    MMFF Improper Torsion              -0.90424
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.51518
+ Other energy terms:
+    Sheffield Solvation               -18.74376
+  ================================================================
+  Total energy                         13.77142 kcal/mol
+
+  Conformer free energy wrt ensemble       3.83 kcal/mol
+==================================================================
+
+
+Conformer  113
+  Optimized in  222 cycles; optimization information:
+    Initial:  opt_function=  1.77250e+01 ;  rms_gradient=  3.697e+00
+    Final:    opt_function=  1.23029e+01 ;  rms_gradient=  1.651e-07
+    Displacement from initial geom:   RMSD= 0.78090 ; Max displ= 1.49646
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.28e+02
+    Rotational entropy                  1.49565e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.33e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.26151
+    MMFF Coulomb                      -40.93109
+    MMFF Bond                           7.22664
+    MMFF Bend                          27.82642
+    MMFF StretchBend                   -0.33405
+    MMFF Torsion                        1.34132
+    MMFF Improper Torsion              -1.06285
+                                     ----------
+    Ligand MMFF Intramol. Energy       30.32790
+ Other energy terms:
+    Sheffield Solvation               -18.02505
+  ================================================================
+  Total energy                         12.30286 kcal/mol
+
+  Conformer free energy wrt ensemble       2.66 kcal/mol
+==================================================================
+
+
+Conformer  115
+  Optimized in  216 cycles; optimization information:
+    Initial:  opt_function=  1.83698e+01 ;  rms_gradient=  3.612e+00
+    Final:    opt_function=  1.39810e+01 ;  rms_gradient=  8.467e-08
+    Displacement from initial geom:   RMSD= 0.27114 ; Max displ= 0.51866
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.37e+02
+    Rotational entropy                  1.50636e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.43e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.58800
+    MMFF Coulomb                      -39.63413
+    MMFF Bond                           7.09559
+    MMFF Bend                          27.07235
+    MMFF StretchBend                   -0.35427
+    MMFF Torsion                        2.84781
+    MMFF Improper Torsion              -0.87527
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.74009
+ Other energy terms:
+    Sheffield Solvation               -18.75910
+  ================================================================
+  Total energy                         13.98099 kcal/mol
+
+  Conformer free energy wrt ensemble       3.60 kcal/mol
+==================================================================
+
+
+Conformer  116
+  Optimized in  220 cycles; optimization information:
+    Initial:  opt_function=  1.84139e+01 ;  rms_gradient=  3.360e+00
+    Final:    opt_function=  1.39750e+01 ;  rms_gradient=  2.979e-07
+    Displacement from initial geom:   RMSD= 0.35463 ; Max displ= 0.65085
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.34e+02
+    Rotational entropy                  1.51028e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.41e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.55129
+    MMFF Coulomb                      -38.99409
+    MMFF Bond                           7.09232
+    MMFF Bend                          27.04056
+    MMFF StretchBend                   -0.30738
+    MMFF Torsion                        2.74422
+    MMFF Improper Torsion              -0.80201
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.32491
+ Other energy terms:
+    Sheffield Solvation               -19.34988
+  ================================================================
+  Total energy                         13.97504 kcal/mol
+
+  Conformer free energy wrt ensemble       3.76 kcal/mol
+==================================================================
+
+
+Conformer  119
+  Optimized in  217 cycles; optimization information:
+    Initial:  opt_function=  1.84483e+01 ;  rms_gradient=  3.344e+00
+    Final:    opt_function=  1.40601e+01 ;  rms_gradient=  1.082e-07
+    Displacement from initial geom:   RMSD= 0.34962 ; Max displ= 0.65341
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.35e+02
+    Rotational entropy                  1.51255e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.42e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.61935
+    MMFF Coulomb                      -39.95587
+    MMFF Bond                           7.09225
+    MMFF Bend                          27.05769
+    MMFF StretchBend                   -0.31195
+    MMFF Torsion                        2.78954
+    MMFF Improper Torsion              -0.85231
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.43869
+ Other energy terms:
+    Sheffield Solvation               -18.37858
+  ================================================================
+  Total energy                         14.06011 kcal/mol
+
+  Conformer free energy wrt ensemble       3.72 kcal/mol
+==================================================================
+
+
+Conformer  122
+  Optimized in  264 cycles; optimization information:
+    Initial:  opt_function=  1.75632e+01 ;  rms_gradient=  3.693e+00
+    Final:    opt_function=  1.21892e+01 ;  rms_gradient=  4.229e-07
+    Displacement from initial geom:   RMSD= 0.86560 ; Max displ= 1.41982
+    cpu time: 0.16000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.27e+02
+    Rotational entropy                  1.48684e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.31e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.31262
+    MMFF Coulomb                      -42.31531
+    MMFF Bond                           7.23959
+    MMFF Bend                          27.61932
+    MMFF StretchBend                   -0.33093
+    MMFF Torsion                        3.12239
+    MMFF Improper Torsion              -1.12705
+                                     ----------
+    Ligand MMFF Intramol. Energy       29.52062
+ Other energy terms:
+    Sheffield Solvation               -17.33143
+  ================================================================
+  Total energy                         12.18919 kcal/mol
+
+  Conformer free energy wrt ensemble       2.83 kcal/mol
+==================================================================
+
+
+Conformer  128
+  Optimized in  227 cycles; optimization information:
+    Initial:  opt_function=  1.84878e+01 ;  rms_gradient=  3.499e+00
+    Final:    opt_function=  1.38944e+01 ;  rms_gradient=  1.236e-07
+    Displacement from initial geom:   RMSD= 0.54686 ; Max displ= 0.88668
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.30e+02
+    Rotational entropy                  1.50617e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.36e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.16886
+    MMFF Coulomb                      -38.86136
+    MMFF Bond                           7.07251
+    MMFF Bend                          27.03589
+    MMFF StretchBend                   -0.32299
+    MMFF Torsion                        2.97287
+    MMFF Improper Torsion              -0.80408
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.26169
+ Other energy terms:
+    Sheffield Solvation               -19.36728
+  ================================================================
+  Total energy                         13.89442 kcal/mol
+
+  Conformer free energy wrt ensemble       4.11 kcal/mol
+==================================================================
+
+
+Conformer  132
+  Optimized in  230 cycles; optimization information:
+    Initial:  opt_function=  1.77998e+01 ;  rms_gradient=  3.703e+00
+    Final:    opt_function=  1.23372e+01 ;  rms_gradient=  1.851e-08
+    Displacement from initial geom:   RMSD= 0.81062 ; Max displ= 1.50290
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.28e+02
+    Rotational entropy                  1.49511e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.33e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.29130
+    MMFF Coulomb                      -40.91506
+    MMFF Bond                           7.22013
+    MMFF Bend                          27.83706
+    MMFF StretchBend                   -0.30567
+    MMFF Torsion                        1.28049
+    MMFF Improper Torsion              -1.03143
+                                     ----------
+    Ligand MMFF Intramol. Energy       30.37683
+ Other energy terms:
+    Sheffield Solvation               -18.03962
+  ================================================================
+  Total energy                         12.33721 kcal/mol
+
+  Conformer free energy wrt ensemble       2.73 kcal/mol
+==================================================================
+
+
+Conformer  133
+  Optimized in  228 cycles; optimization information:
+    Initial:  opt_function=  1.77854e+01 ;  rms_gradient=  3.712e+00
+    Final:    opt_function=  1.12729e+01 ;  rms_gradient=  5.100e-08
+    Displacement from initial geom:   RMSD= 0.83211 ; Max displ= 1.86414
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.16e+02
+    Rotational entropy                  1.48679e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.20e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.52594
+    MMFF Coulomb                      -43.37446
+    MMFF Bond                           7.28055
+    MMFF Bend                          27.98280
+    MMFF StretchBend                   -0.33281
+    MMFF Torsion                        1.24761
+    MMFF Improper Torsion              -0.96840
+                                     ----------
+    Ligand MMFF Intramol. Energy       27.36124
+ Other energy terms:
+    Sheffield Solvation               -16.08831
+  ================================================================
+  Total energy                         11.27293 kcal/mol
+
+  Conformer free energy wrt ensemble       2.59 kcal/mol
+==================================================================
+
+
+Conformer  137
+  Optimized in  249 cycles; optimization information:
+    Initial:  opt_function=  1.77894e+01 ;  rms_gradient=  3.739e+00
+    Final:    opt_function=  1.20798e+01 ;  rms_gradient=  6.307e-07
+    Displacement from initial geom:   RMSD= 1.12983 ; Max displ= 2.53496
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.27e+02
+    Rotational entropy                  1.49403e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.32e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.38094
+    MMFF Coulomb                      -43.12124
+    MMFF Bond                           7.28373
+    MMFF Bend                          27.75050
+    MMFF StretchBend                   -0.31310
+    MMFF Torsion                        1.32573
+    MMFF Improper Torsion              -0.64194
+                                     ----------
+    Ligand MMFF Intramol. Energy       28.66462
+ Other energy terms:
+    Sheffield Solvation               -16.58483
+  ================================================================
+  Total energy                         12.07979 kcal/mol
+
+  Conformer free energy wrt ensemble       2.52 kcal/mol
+==================================================================
+
+
+Conformer  138
+  Optimized in  224 cycles; optimization information:
+    Initial:  opt_function=  1.84048e+01 ;  rms_gradient=  3.505e+00
+    Final:    opt_function=  1.38522e+01 ;  rms_gradient=  8.377e-08
+    Displacement from initial geom:   RMSD= 0.36125 ; Max displ= 0.76844
+    cpu time: 0.16000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.31e+02
+    Rotational entropy                  1.50339e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.37e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.28549
+    MMFF Coulomb                      -39.65020
+    MMFF Bond                           7.07072
+    MMFF Bend                          27.03198
+    MMFF StretchBend                   -0.32883
+    MMFF Torsion                        3.06479
+    MMFF Improper Torsion              -0.86851
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.60544
+ Other energy terms:
+    Sheffield Solvation               -18.75328
+  ================================================================
+  Total energy                         13.85216 kcal/mol
+
+  Conformer free energy wrt ensemble       3.94 kcal/mol
+==================================================================
+
+
+Conformer  139
+  Optimized in  213 cycles; optimization information:
+    Initial:  opt_function=  1.84542e+01 ;  rms_gradient=  3.618e+00
+    Final:    opt_function=  1.40621e+01 ;  rms_gradient=  1.788e-07
+    Displacement from initial geom:   RMSD= 0.29148 ; Max displ= 0.49450
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.36e+02
+    Rotational entropy                  1.50853e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.43e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.67197
+    MMFF Coulomb                      -39.62541
+    MMFF Bond                           7.09087
+    MMFF Bend                          27.07994
+    MMFF StretchBend                   -0.32519
+    MMFF Torsion                        2.77768
+    MMFF Improper Torsion              -0.83952
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.83033
+ Other energy terms:
+    Sheffield Solvation               -18.76824
+  ================================================================
+  Total energy                         14.06209 kcal/mol
+
+  Conformer free energy wrt ensemble       3.71 kcal/mol
+==================================================================
+
+
+Conformer  141
+  Optimized in  222 cycles; optimization information:
+    Initial:  opt_function=  1.85601e+01 ;  rms_gradient=  3.620e+00
+    Final:    opt_function=  1.41035e+01 ;  rms_gradient=  7.233e-08
+    Displacement from initial geom:   RMSD= 0.33501 ; Max displ= 0.82661
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.34e+02
+    Rotational entropy                  1.51068e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.41e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.55660
+    MMFF Coulomb                      -38.81637
+    MMFF Bond                           7.09304
+    MMFF Bend                          27.08677
+    MMFF StretchBend                   -0.32039
+    MMFF Torsion                        2.69244
+    MMFF Improper Torsion              -0.77980
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.51229
+ Other energy terms:
+    Sheffield Solvation               -19.40877
+  ================================================================
+  Total energy                         14.10351 kcal/mol
+
+  Conformer free energy wrt ensemble       3.87 kcal/mol
+==================================================================
+
+
+Conformer  142
+  Optimized in  247 cycles; optimization information:
+    Initial:  opt_function=  1.88121e+01 ;  rms_gradient=  3.446e+00
+    Final:    opt_function=  1.39463e+01 ;  rms_gradient=  3.802e-08
+    Displacement from initial geom:   RMSD= 0.48350 ; Max displ= 1.09396
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.29e+02
+    Rotational entropy                  1.50035e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.35e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.98268
+    MMFF Coulomb                      -38.37108
+    MMFF Bond                           7.05886
+    MMFF Bend                          27.30134
+    MMFF StretchBend                   -0.31972
+    MMFF Torsion                        2.95188
+    MMFF Improper Torsion              -0.87168
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.73228
+ Other energy terms:
+    Sheffield Solvation               -19.78599
+  ================================================================
+  Total energy                         13.94629 kcal/mol
+
+  Conformer free energy wrt ensemble       4.23 kcal/mol
+==================================================================
+
+
+Conformer  149
+  Optimized in  217 cycles; optimization information:
+    Initial:  opt_function=  1.78293e+01 ;  rms_gradient=  3.705e+00
+    Final:    opt_function=  1.31277e+01 ;  rms_gradient=  2.057e-08
+    Displacement from initial geom:   RMSD= 0.33314 ; Max displ= 0.55304
+    cpu time: 0.10000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.36e+02
+    Rotational entropy                  1.50668e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.43e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.90271
+    MMFF Coulomb                      -40.19887
+    MMFF Bond                           7.20577
+    MMFF Bend                          27.90838
+    MMFF StretchBend                   -0.32824
+    MMFF Torsion                        1.00558
+    MMFF Improper Torsion              -0.88564
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.60970
+ Other energy terms:
+    Sheffield Solvation               -18.48198
+  ================================================================
+  Total energy                         13.12772 kcal/mol
+
+  Conformer free energy wrt ensemble       2.73 kcal/mol
+==================================================================
+
+
+Conformer  150
+  Optimized in  220 cycles; optimization information:
+    Initial:  opt_function=  1.83156e+01 ;  rms_gradient=  3.613e+00
+    Final:    opt_function=  1.34790e+01 ;  rms_gradient=  1.139e-07
+    Displacement from initial geom:   RMSD= 0.29064 ; Max displ= 0.68465
+    cpu time: 0.15000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.34e+02
+    Rotational entropy                  1.50522e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.40e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.32831
+    MMFF Coulomb                      -39.75972
+    MMFF Bond                           7.09304
+    MMFF Bend                          26.99691
+    MMFF StretchBend                   -0.34180
+    MMFF Torsion                        2.71996
+    MMFF Improper Torsion              -0.81881
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.21789
+ Other energy terms:
+    Sheffield Solvation               -18.73889
+  ================================================================
+  Total energy                         13.47900 kcal/mol
+
+  Conformer free energy wrt ensemble       3.32 kcal/mol
+==================================================================
+
+
+Conformer  151
+  Optimized in  210 cycles; optimization information:
+    Initial:  opt_function=  1.84414e+01 ;  rms_gradient=  3.586e+00
+    Final:    opt_function=  1.37548e+01 ;  rms_gradient=  4.811e-08
+    Displacement from initial geom:   RMSD= 0.31679 ; Max displ= 0.55604
+    cpu time: 0.10000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.36e+02
+    Rotational entropy                  1.50785e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.43e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.47691
+    MMFF Coulomb                      -40.54441
+    MMFF Bond                           7.09265
+    MMFF Bend                          27.07485
+    MMFF StretchBend                   -0.35906
+    MMFF Torsion                        2.79626
+    MMFF Improper Torsion              -0.90831
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.62889
+ Other energy terms:
+    Sheffield Solvation               -17.87407
+  ================================================================
+  Total energy                         13.75481 kcal/mol
+
+  Conformer free energy wrt ensemble       3.41 kcal/mol
+==================================================================
+
+
+Conformer  157
+  Optimized in  256 cycles; optimization information:
+    Initial:  opt_function=  1.94634e+01 ;  rms_gradient=  3.445e+00
+    Final:    opt_function=  1.32300e+01 ;  rms_gradient=  1.969e-07
+    Displacement from initial geom:   RMSD= 0.76523 ; Max displ= 1.68189
+    cpu time: 0.14000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.15e+02
+    Rotational entropy                  1.48252e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.19e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           34.46518
+    MMFF Coulomb                      -40.05810
+    MMFF Bond                           6.96272
+    MMFF Bend                          27.85334
+    MMFF StretchBend                   -0.30566
+    MMFF Torsion                        3.56923
+    MMFF Improper Torsion              -0.71161
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.77511
+ Other energy terms:
+    Sheffield Solvation               -18.54506
+  ================================================================
+  Total energy                         13.23005 kcal/mol
+
+  Conformer free energy wrt ensemble       4.75 kcal/mol
+==================================================================
+
+
+Conformer  165
+  Optimized in  373 cycles; optimization information:
+    Initial:  opt_function=  1.94908e+01 ;  rms_gradient=  3.480e+00
+    Final:    opt_function=  1.21063e+01 ;  rms_gradient=  9.287e-07
+    Displacement from initial geom:   RMSD= 1.96262 ; Max displ= 4.12708
+    cpu time: 0.17000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.13e+02
+    Rotational entropy                  1.48753e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.17e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.81769
+    MMFF Coulomb                      -41.98536
+    MMFF Bond                           7.19152
+    MMFF Bend                          27.46631
+    MMFF StretchBend                   -0.31623
+    MMFF Torsion                        2.53724
+    MMFF Improper Torsion              -1.10703
+                                     ----------
+    Ligand MMFF Intramol. Energy       29.60415
+ Other energy terms:
+    Sheffield Solvation               -17.49787
+  ================================================================
+  Total energy                         12.10628 kcal/mol
+
+  Conformer free energy wrt ensemble       3.68 kcal/mol
+==================================================================
+
+
+Conformer  171
+  Optimized in  210 cycles; optimization information:
+    Initial:  opt_function=  1.83753e+01 ;  rms_gradient=  3.599e+00
+    Final:    opt_function=  1.34567e+01 ;  rms_gradient=  3.082e-07
+    Displacement from initial geom:   RMSD= 0.31391 ; Max displ= 0.71261
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.31e+02
+    Rotational entropy                  1.50137e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.37e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.00005
+    MMFF Coulomb                      -39.74888
+    MMFF Bond                           7.07271
+    MMFF Bend                          26.98261
+    MMFF StretchBend                   -0.33751
+    MMFF Torsion                        2.99573
+    MMFF Improper Torsion              -0.78525
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.17945
+ Other energy terms:
+    Sheffield Solvation               -18.72278
+  ================================================================
+  Total energy                         13.45668 kcal/mol
+
+  Conformer free energy wrt ensemble       3.64 kcal/mol
+==================================================================
+
+
+Conformer  172
+  Optimized in  256 cycles; optimization information:
+    Initial:  opt_function=  1.89269e+01 ;  rms_gradient=  3.579e+00
+    Final:    opt_function=  1.21892e+01 ;  rms_gradient=  1.493e-08
+    Displacement from initial geom:   RMSD= 0.62242 ; Max displ= 1.76826
+    cpu time: 0.14000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.27e+02
+    Rotational entropy                  1.48684e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.31e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.31262
+    MMFF Coulomb                      -42.31531
+    MMFF Bond                           7.23959
+    MMFF Bend                          27.61932
+    MMFF StretchBend                   -0.33093
+    MMFF Torsion                        3.12239
+    MMFF Improper Torsion              -1.12705
+                                     ----------
+    Ligand MMFF Intramol. Energy       29.52062
+ Other energy terms:
+    Sheffield Solvation               -17.33143
+  ================================================================
+  Total energy                         12.18919 kcal/mol
+
+  Conformer free energy wrt ensemble       2.83 kcal/mol
+==================================================================
+
+
+Conformer  173
+  Optimized in  218 cycles; optimization information:
+    Initial:  opt_function=  1.79082e+01 ;  rms_gradient=  3.712e+00
+    Final:    opt_function=  1.31994e+01 ;  rms_gradient=  9.968e-08
+    Displacement from initial geom:   RMSD= 0.36010 ; Max displ= 0.73194
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.36e+02
+    Rotational entropy                  1.50844e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.42e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.97813
+    MMFF Coulomb                      -40.20100
+    MMFF Bond                           7.20041
+    MMFF Bend                          27.91507
+    MMFF StretchBend                   -0.29921
+    MMFF Torsion                        0.93563
+    MMFF Improper Torsion              -0.84980
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.67923
+ Other energy terms:
+    Sheffield Solvation               -18.47981
+  ================================================================
+  Total energy                         13.19942 kcal/mol
+
+  Conformer free energy wrt ensemble       2.83 kcal/mol
+==================================================================
+
+
+Conformer  175
+  Optimized in  211 cycles; optimization information:
+    Initial:  opt_function=  1.85306e+01 ;  rms_gradient=  3.573e+00
+    Final:    opt_function=  1.37654e+01 ;  rms_gradient=  2.025e-07
+    Displacement from initial geom:   RMSD= 0.24741 ; Max displ= 0.43073
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.33e+02
+    Rotational entropy                  1.50513e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.39e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.18855
+    MMFF Coulomb                      -40.58826
+    MMFF Bond                           7.06414
+    MMFF Bend                          27.08432
+    MMFF StretchBend                   -0.35562
+    MMFF Torsion                        3.06126
+    MMFF Improper Torsion              -0.86972
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.58469
+ Other energy terms:
+    Sheffield Solvation               -17.81934
+  ================================================================
+  Total energy                         13.76535 kcal/mol
+
+  Conformer free energy wrt ensemble       3.74 kcal/mol
+==================================================================
+
+
+Conformer  176
+  Optimized in  221 cycles; optimization information:
+    Initial:  opt_function=  1.85106e+01 ;  rms_gradient=  3.599e+00
+    Final:    opt_function=  1.36153e+01 ;  rms_gradient=  3.683e-07
+    Displacement from initial geom:   RMSD= 0.64006 ; Max displ= 1.29477
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.35e+02
+    Rotational entropy                  1.50389e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.41e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.29918
+    MMFF Coulomb                      -39.67160
+    MMFF Bond                           7.09625
+    MMFF Bend                          27.01016
+    MMFF StretchBend                   -0.34741
+    MMFF Torsion                        2.71680
+    MMFF Improper Torsion              -0.82543
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.27795
+ Other energy terms:
+    Sheffield Solvation               -18.66263
+  ================================================================
+  Total energy                         13.61532 kcal/mol
+
+  Conformer free energy wrt ensemble       3.43 kcal/mol
+==================================================================
+
+
+Conformer  178
+  Optimized in  215 cycles; optimization information:
+    Initial:  opt_function=  1.84197e+01 ;  rms_gradient=  3.622e+00
+    Final:    opt_function=  1.35725e+01 ;  rms_gradient=  6.814e-07
+    Displacement from initial geom:   RMSD= 0.33557 ; Max displ= 0.66532
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.34e+02
+    Rotational entropy                  1.50664e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.40e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.42410
+    MMFF Coulomb                      -39.76243
+    MMFF Bond                           7.08929
+    MMFF Bend                          27.00316
+    MMFF StretchBend                   -0.31402
+    MMFF Torsion                        2.64824
+    MMFF Improper Torsion              -0.77960
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.30873
+ Other energy terms:
+    Sheffield Solvation               -18.73626
+  ================================================================
+  Total energy                         13.57247 kcal/mol
+
+  Conformer free energy wrt ensemble       3.45 kcal/mol
+==================================================================
+
+
+Conformer  179
+  Optimized in  215 cycles; optimization information:
+    Initial:  opt_function=  1.85423e+01 ;  rms_gradient=  3.591e+00
+    Final:    opt_function=  1.38491e+01 ;  rms_gradient=  1.127e-07
+    Displacement from initial geom:   RMSD= 0.37247 ; Max displ= 0.69036
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.36e+02
+    Rotational entropy                  1.51013e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.42e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.57102
+    MMFF Coulomb                      -40.55588
+    MMFF Bond                           7.08712
+    MMFF Bend                          27.08854
+    MMFF StretchBend                   -0.33088
+    MMFF Torsion                        2.72597
+    MMFF Improper Torsion              -0.87104
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.71485
+ Other energy terms:
+    Sheffield Solvation               -17.86575
+  ================================================================
+  Total energy                         13.84910 kcal/mol
+
+  Conformer free energy wrt ensemble       3.52 kcal/mol
+==================================================================
+
+
+Conformer  184
+  Optimized in  215 cycles; optimization information:
+    Initial:  opt_function=  1.84775e+01 ;  rms_gradient=  3.330e+00
+    Final:    opt_function=  1.37556e+01 ;  rms_gradient=  1.266e-07
+    Displacement from initial geom:   RMSD= 0.29660 ; Max displ= 0.64048
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.35e+02
+    Rotational entropy                  1.50504e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.41e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.43968
+    MMFF Coulomb                      -39.41743
+    MMFF Bond                           7.09799
+    MMFF Bend                          27.07705
+    MMFF StretchBend                   -0.34088
+    MMFF Torsion                        2.75255
+    MMFF Improper Torsion              -0.83722
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.77173
+ Other energy terms:
+    Sheffield Solvation               -19.01616
+  ================================================================
+  Total energy                         13.75557 kcal/mol
+
+  Conformer free energy wrt ensemble       3.55 kcal/mol
+==================================================================
+
+
+Conformer  186
+  Optimized in  220 cycles; optimization information:
+    Initial:  opt_function=  1.84651e+01 ;  rms_gradient=  3.313e+00
+    Final:    opt_function=  1.38369e+01 ;  rms_gradient=  1.011e-07
+    Displacement from initial geom:   RMSD= 0.35904 ; Max displ= 0.59507
+    cpu time: 0.14000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.35e+02
+    Rotational entropy                  1.51286e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.42e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.51353
+    MMFF Coulomb                      -39.98510
+    MMFF Bond                           7.09877
+    MMFF Bend                          27.11910
+    MMFF StretchBend                   -0.34647
+    MMFF Torsion                        2.78042
+    MMFF Improper Torsion              -0.88834
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.29192
+ Other energy terms:
+    Sheffield Solvation               -18.45507
+  ================================================================
+  Total energy                         13.83686 kcal/mol
+
+  Conformer free energy wrt ensemble       3.49 kcal/mol
+==================================================================
+
+
+Conformer  188
+  Optimized in  238 cycles; optimization information:
+    Initial:  opt_function=  1.81298e+01 ;  rms_gradient=  3.605e+00
+    Final:    opt_function=  1.22062e+01 ;  rms_gradient=  1.432e-07
+    Displacement from initial geom:   RMSD= 0.70192 ; Max displ= 1.28288
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.29e+02
+    Rotational entropy                  1.49428e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.34e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.50753
+    MMFF Coulomb                      -42.12869
+    MMFF Bond                           7.02580
+    MMFF Bend                          27.63273
+    MMFF StretchBend                   -0.34428
+    MMFF Torsion                        2.57220
+    MMFF Improper Torsion              -0.75117
+                                     ----------
+    Ligand MMFF Intramol. Energy       29.51412
+ Other energy terms:
+    Sheffield Solvation               -17.30795
+  ================================================================
+  Total energy                         12.20617 kcal/mol
+
+  Conformer free energy wrt ensemble       2.49 kcal/mol
+==================================================================
+
+
+Conformer  200
+  Optimized in  230 cycles; optimization information:
+    Initial:  opt_function=  1.84035e+01 ;  rms_gradient=  3.602e+00
+    Final:    opt_function=  1.36093e+01 ;  rms_gradient=  3.643e-09
+    Displacement from initial geom:   RMSD= 0.40701 ; Max displ= 0.75394
+    cpu time: 0.14000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.36e+02
+    Rotational entropy                  1.50865e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.42e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.48161
+    MMFF Coulomb                      -40.58707
+    MMFF Bond                           7.09707
+    MMFF Bend                          27.06898
+    MMFF StretchBend                   -0.35599
+    MMFF Torsion                        2.78212
+    MMFF Improper Torsion              -0.90481
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.58192
+ Other energy terms:
+    Sheffield Solvation               -17.97258
+  ================================================================
+  Total energy                         13.60934 kcal/mol
+
+  Conformer free energy wrt ensemble       3.28 kcal/mol
+==================================================================
+
+
+Conformer  207
+  Optimized in  246 cycles; optimization information:
+    Initial:  opt_function=  1.85858e+01 ;  rms_gradient=  3.590e+00
+    Final:    opt_function=  1.36451e+01 ;  rms_gradient=  3.861e-07
+    Displacement from initial geom:   RMSD= 0.81709 ; Max displ= 1.55447
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.32e+02
+    Rotational entropy                  1.50168e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.37e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.02364
+    MMFF Coulomb                      -39.70242
+    MMFF Bond                           7.06836
+    MMFF Bend                          27.03244
+    MMFF StretchBend                   -0.34334
+    MMFF Torsion                        2.97700
+    MMFF Improper Torsion              -0.79117
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.26451
+ Other energy terms:
+    Sheffield Solvation               -18.61936
+  ================================================================
+  Total energy                         13.64515 kcal/mol
+
+  Conformer free energy wrt ensemble       3.76 kcal/mol
+==================================================================
+
+
+Conformer  208
+  Optimized in  223 cycles; optimization information:
+    Initial:  opt_function=  1.84871e+01 ;  rms_gradient=  3.607e+00
+    Final:    opt_function=  1.35617e+01 ;  rms_gradient=  6.225e-08
+    Displacement from initial geom:   RMSD= 0.36237 ; Max displ= 0.86185
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.30e+02
+    Rotational entropy                  1.50312e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.36e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.10393
+    MMFF Coulomb                      -39.75261
+    MMFF Bond                           7.06731
+    MMFF Bend                          26.99472
+    MMFF StretchBend                   -0.31052
+    MMFF Torsion                        2.92062
+    MMFF Improper Torsion              -0.74311
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.28034
+ Other energy terms:
+    Sheffield Solvation               -18.71867
+  ================================================================
+  Total energy                         13.56167 kcal/mol
+
+  Conformer free energy wrt ensemble       3.77 kcal/mol
+==================================================================
+
+
+Conformer  215
+  Optimized in  218 cycles; optimization information:
+    Initial:  opt_function=  1.86243e+01 ;  rms_gradient=  3.577e+00
+    Final:    opt_function=  1.38526e+01 ;  rms_gradient=  6.657e-08
+    Displacement from initial geom:   RMSD= 0.28705 ; Max displ= 0.54878
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.32e+02
+    Rotational entropy                  1.50717e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.39e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.27740
+    MMFF Coulomb                      -40.59676
+    MMFF Bond                           7.05917
+    MMFF Bend                          27.09616
+    MMFF StretchBend                   -0.32744
+    MMFF Torsion                        2.99172
+    MMFF Improper Torsion              -0.83392
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.66632
+ Other energy terms:
+    Sheffield Solvation               -17.81368
+  ================================================================
+  Total energy                         13.85265 kcal/mol
+
+  Conformer free energy wrt ensemble       3.85 kcal/mol
+==================================================================
+
+
+Conformer  216
+  Optimized in  306 cycles; optimization information:
+    Initial:  opt_function=  1.99435e+01 ;  rms_gradient=  3.341e+00
+    Final:    opt_function=  1.31922e+01 ;  rms_gradient=  2.863e-07
+    Displacement from initial geom:   RMSD= 1.33350 ; Max displ= 2.20366
+    cpu time: 0.16000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.21e+02
+    Rotational entropy                  1.48367e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.25e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           34.80198
+    MMFF Coulomb                      -41.91955
+    MMFF Bond                           7.03726
+    MMFF Bend                          28.45533
+    MMFF StretchBend                   -0.28734
+    MMFF Torsion                        3.10576
+    MMFF Improper Torsion              -0.62746
+                                     ----------
+    Ligand MMFF Intramol. Energy       30.56599
+ Other energy terms:
+    Sheffield Solvation               -17.37382
+  ================================================================
+  Total energy                         13.19217 kcal/mol
+
+  Conformer free energy wrt ensemble       4.20 kcal/mol
+==================================================================
+
+
+Conformer  223
+  Optimized in  234 cycles; optimization information:
+    Initial:  opt_function=  1.87077e+01 ;  rms_gradient=  3.355e+00
+    Final:    opt_function=  1.40684e+01 ;  rms_gradient=  1.776e-07
+    Displacement from initial geom:   RMSD= 0.53687 ; Max displ= 1.20010
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.36e+02
+    Rotational entropy                  1.51250e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.43e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.64095
+    MMFF Coulomb                      -38.86187
+    MMFF Bond                           7.09073
+    MMFF Bend                          27.08405
+    MMFF StretchBend                   -0.31404
+    MMFF Torsion                        2.78777
+    MMFF Improper Torsion              -0.85175
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.57582
+ Other energy terms:
+    Sheffield Solvation               -19.50746
+  ================================================================
+  Total energy                         14.06836 kcal/mol
+
+  Conformer free energy wrt ensemble       3.72 kcal/mol
+==================================================================
+
+
+Conformer  226
+  Optimized in  259 cycles; optimization information:
+    Initial:  opt_function=  1.82051e+01 ;  rms_gradient=  3.615e+00
+    Final:    opt_function=  1.22730e+01 ;  rms_gradient=  1.096e-07
+    Displacement from initial geom:   RMSD= 0.80419 ; Max displ= 1.69119
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.29e+02
+    Rotational entropy                  1.49471e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.34e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.58240
+    MMFF Coulomb                      -42.13887
+    MMFF Bond                           7.02112
+    MMFF Bend                          27.64362
+    MMFF StretchBend                   -0.31666
+    MMFF Torsion                        2.49897
+    MMFF Improper Torsion              -0.71449
+                                     ----------
+    Ligand MMFF Intramol. Energy       29.57609
+ Other energy terms:
+    Sheffield Solvation               -17.30313
+  ================================================================
+  Total energy                         12.27296 kcal/mol
+
+  Conformer free energy wrt ensemble       2.58 kcal/mol
+==================================================================
+
+
+Conformer  229
+  Optimized in  230 cycles; optimization information:
+    Initial:  opt_function=  1.86186e+01 ;  rms_gradient=  3.602e+00
+    Final:    opt_function=  1.37220e+01 ;  rms_gradient=  5.232e-07
+    Displacement from initial geom:   RMSD= 0.72385 ; Max displ= 1.33016
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.34e+02
+    Rotational entropy                  1.50587e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.40e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.40607
+    MMFF Coulomb                      -39.68807
+    MMFF Bond                           7.09294
+    MMFF Bend                          27.02104
+    MMFF StretchBend                   -0.32041
+    MMFF Torsion                        2.64220
+    MMFF Improper Torsion              -0.78227
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.37150
+ Other energy terms:
+    Sheffield Solvation               -18.64951
+  ================================================================
+  Total energy                         13.72199 kcal/mol
+
+  Conformer free energy wrt ensemble       3.57 kcal/mol
+==================================================================
+
+
+Conformer  230
+  Optimized in  234 cycles; optimization information:
+    Initial:  opt_function=  2.01513e+01 ;  rms_gradient=  3.353e+00
+    Final:    opt_function=  1.50289e+01 ;  rms_gradient=  1.558e-07
+    Displacement from initial geom:   RMSD= 0.52929 ; Max displ= 1.02255
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.32e+02
+    Rotational entropy                  1.49525e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.37e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.40982
+    MMFF Coulomb                      -37.67065
+    MMFF Bond                           7.08730
+    MMFF Bend                          28.27827
+    MMFF StretchBend                   -0.23684
+    MMFF Torsion                        2.76495
+    MMFF Improper Torsion              -0.70480
+                                     ----------
+    Ligand MMFF Intramol. Energy       34.92805
+ Other energy terms:
+    Sheffield Solvation               -19.89919
+  ================================================================
+  Total energy                         15.02886 kcal/mol
+
+  Conformer free energy wrt ensemble       5.18 kcal/mol
+==================================================================
+
+
+Conformer  234
+  Optimized in  239 cycles; optimization information:
+    Initial:  opt_function=  1.84674e+01 ;  rms_gradient=  3.593e+00
+    Final:    opt_function=  1.36000e+01 ;  rms_gradient=  1.053e-07
+    Displacement from initial geom:   RMSD= 0.61700 ; Max displ= 1.07112
+    cpu time: 0.15000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.33e+02
+    Rotational entropy                  1.50532e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.39e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.16635
+    MMFF Coulomb                      -40.56683
+    MMFF Bond                           7.07155
+    MMFF Bend                          27.06680
+    MMFF StretchBend                   -0.35312
+    MMFF Torsion                        3.05330
+    MMFF Improper Torsion              -0.87059
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.56745
+ Other energy terms:
+    Sheffield Solvation               -17.96743
+  ================================================================
+  Total energy                         13.60002 kcal/mol
+
+  Conformer free energy wrt ensemble       3.60 kcal/mol
+==================================================================
+
+
+Conformer  236
+  Optimized in  221 cycles; optimization information:
+    Initial:  opt_function=  1.85744e+01 ;  rms_gradient=  3.338e+00
+    Final:    opt_function=  1.38411e+01 ;  rms_gradient=  2.190e-08
+    Displacement from initial geom:   RMSD= 0.33355 ; Max displ= 0.63358
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.34e+02
+    Rotational entropy                  1.50712e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.40e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.52757
+    MMFF Coulomb                      -39.41863
+    MMFF Bond                           7.09463
+    MMFF Bend                          27.08253
+    MMFF StretchBend                   -0.31258
+    MMFF Torsion                        2.68022
+    MMFF Improper Torsion              -0.79836
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.85539
+ Other energy terms:
+    Sheffield Solvation               -19.01428
+  ================================================================
+  Total energy                         13.84110 kcal/mol
+
+  Conformer free energy wrt ensemble       3.66 kcal/mol
+==================================================================
+
+
+Conformer  238
+  Optimized in  220 cycles; optimization information:
+    Initial:  opt_function=  1.85621e+01 ;  rms_gradient=  3.323e+00
+    Final:    opt_function=  1.39250e+01 ;  rms_gradient=  2.719e-07
+    Displacement from initial geom:   RMSD= 0.46733 ; Max displ= 0.81205
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.35e+02
+    Rotational entropy                  1.51349e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.42e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.60193
+    MMFF Coulomb                      -39.98624
+    MMFF Bond                           7.09338
+    MMFF Bend                          27.12832
+    MMFF StretchBend                   -0.31721
+    MMFF Torsion                        2.71079
+    MMFF Improper Torsion              -0.85257
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.37841
+ Other energy terms:
+    Sheffield Solvation               -18.45342
+  ================================================================
+  Total energy                         13.92499 kcal/mol
+
+  Conformer free energy wrt ensemble       3.61 kcal/mol
+==================================================================
+
+
+Conformer  240
+  Optimized in  243 cycles; optimization information:
+    Initial:  opt_function=  1.80491e+01 ;  rms_gradient=  3.738e+00
+    Final:    opt_function=  1.26130e+01 ;  rms_gradient=  1.730e-07
+    Displacement from initial geom:   RMSD= 0.59142 ; Max displ= 1.42811
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.38e+02
+    Rotational entropy                  1.50290e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.44e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.90382
+    MMFF Coulomb                      -43.27453
+    MMFF Bond                           7.24919
+    MMFF Bend                          28.00515
+    MMFF StretchBend                   -0.32846
+    MMFF Torsion                        1.08012
+    MMFF Improper Torsion              -0.86443
+                                     ----------
+    Ligand MMFF Intramol. Energy       28.77086
+ Other energy terms:
+    Sheffield Solvation               -16.15782
+  ================================================================
+  Total energy                         12.61304 kcal/mol
+
+  Conformer free energy wrt ensemble       2.16 kcal/mol
+==================================================================
+
+
+Conformer  243
+  Optimized in  211 cycles; optimization information:
+    Initial:  opt_function=  1.84899e+01 ;  rms_gradient=  3.608e+00
+    Final:    opt_function=  1.36970e+01 ;  rms_gradient=  7.320e-07
+    Displacement from initial geom:   RMSD= 0.39383 ; Max displ= 0.75801
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.35e+02
+    Rotational entropy                  1.51038e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.42e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.56992
+    MMFF Coulomb                      -40.58949
+    MMFF Bond                           7.09162
+    MMFF Bend                          27.08102
+    MMFF StretchBend                   -0.32724
+    MMFF Torsion                        2.71055
+    MMFF Improper Torsion              -0.86961
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.66678
+ Other energy terms:
+    Sheffield Solvation               -17.96978
+  ================================================================
+  Total energy                         13.69701 kcal/mol
+
+  Conformer free energy wrt ensemble       3.39 kcal/mol
+==================================================================
+
+
+Conformer  244
+  Optimized in  233 cycles; optimization information:
+    Initial:  opt_function=  1.87785e+01 ;  rms_gradient=  3.499e+00
+    Final:    opt_function=  1.39382e+01 ;  rms_gradient=  9.504e-08
+    Displacement from initial geom:   RMSD= 0.47976 ; Max displ= 1.32749
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.31e+02
+    Rotational entropy                  1.50776e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.37e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.28223
+    MMFF Coulomb                      -38.59003
+    MMFF Bond                           7.06986
+    MMFF Bend                          27.02753
+    MMFF StretchBend                   -0.33204
+    MMFF Torsion                        3.08669
+    MMFF Improper Torsion              -0.86887
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.67538
+ Other energy terms:
+    Sheffield Solvation               -19.73716
+  ================================================================
+  Total energy                         13.93823 kcal/mol
+
+  Conformer free energy wrt ensemble       4.03 kcal/mol
+==================================================================
+
+
+Conformer  246
+  Optimized in  221 cycles; optimization information:
+    Initial:  opt_function=  1.80426e+01 ;  rms_gradient=  3.534e+00
+    Final:    opt_function=  1.18946e+01 ;  rms_gradient=  2.770e-08
+    Displacement from initial geom:   RMSD= 0.57488 ; Max displ= 1.02239
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.20e+02
+    Rotational entropy                  1.48998e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.24e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.00181
+    MMFF Coulomb                      -42.39050
+    MMFF Bond                           6.99640
+    MMFF Bend                          27.66241
+    MMFF StretchBend                   -0.35751
+    MMFF Torsion                        2.95276
+    MMFF Improper Torsion              -0.82136
+                                     ----------
+    Ligand MMFF Intramol. Energy       29.04402
+ Other energy terms:
+    Sheffield Solvation               -17.14937
+  ================================================================
+  Total energy                         11.89465 kcal/mol
+
+  Conformer free energy wrt ensemble       2.97 kcal/mol
+==================================================================
+
+
+Conformer  254
+  Optimized in  220 cycles; optimization information:
+    Initial:  opt_function=  1.76597e+01 ;  rms_gradient=  3.822e+00
+    Final:    opt_function=  1.20864e+01 ;  rms_gradient=  2.037e-08
+    Displacement from initial geom:   RMSD= 0.30538 ; Max displ= 0.63251
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.28e+02
+    Rotational entropy                  1.49311e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.33e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.23353
+    MMFF Coulomb                      -43.34477
+    MMFF Bond                           7.29598
+    MMFF Bend                          27.85267
+    MMFF StretchBend                   -0.34396
+    MMFF Torsion                        1.29704
+    MMFF Improper Torsion              -0.83636
+                                     ----------
+    Ligand MMFF Intramol. Energy       28.15414
+ Other energy terms:
+    Sheffield Solvation               -16.06776
+  ================================================================
+  Total energy                         12.08638 kcal/mol
+
+  Conformer free energy wrt ensemble       2.37 kcal/mol
+==================================================================
+
+
+Conformer  257
+  Optimized in  211 cycles; optimization information:
+    Initial:  opt_function=  1.87396e+01 ;  rms_gradient=  3.480e+00
+    Final:    opt_function=  1.38816e+01 ;  rms_gradient=  7.022e-08
+    Displacement from initial geom:   RMSD= 0.39887 ; Max displ= 0.85527
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.34e+02
+    Rotational entropy                  1.50957e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.41e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.43842
+    MMFF Coulomb                      -40.08497
+    MMFF Bond                           7.09770
+    MMFF Bend                          27.02128
+    MMFF StretchBend                   -0.33288
+    MMFF Torsion                        2.80629
+    MMFF Improper Torsion              -0.84005
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.10580
+ Other energy terms:
+    Sheffield Solvation               -18.22419
+  ================================================================
+  Total energy                         13.88160 kcal/mol
+
+  Conformer free energy wrt ensemble       3.67 kcal/mol
+==================================================================
+
+
+Conformer  260
+  Optimized in  261 cycles; optimization information:
+    Initial:  opt_function=  1.86898e+01 ;  rms_gradient=  3.594e+00
+    Final:    opt_function=  1.37417e+01 ;  rms_gradient=  1.230e-07
+    Displacement from initial geom:   RMSD= 0.91183 ; Max displ= 1.54782
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.31e+02
+    Rotational entropy                  1.50341e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.37e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.12241
+    MMFF Coulomb                      -39.71318
+    MMFF Bond                           7.06524
+    MMFF Bend                          27.03976
+    MMFF StretchBend                   -0.31605
+    MMFF Torsion                        2.90558
+    MMFF Improper Torsion              -0.75073
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.35303
+ Other energy terms:
+    Sheffield Solvation               -18.61135
+  ================================================================
+  Total energy                         13.74168 kcal/mol
+
+  Conformer free energy wrt ensemble       3.90 kcal/mol
+==================================================================
+
+
+Conformer  261
+  Optimized in  237 cycles; optimization information:
+    Initial:  opt_function=  1.85654e+01 ;  rms_gradient=  3.339e+00
+    Final:    opt_function=  1.37365e+01 ;  rms_gradient=  1.598e-07
+    Displacement from initial geom:   RMSD= 0.63681 ; Max displ= 1.35597
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.32e+02
+    Rotational entropy                  1.50928e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.38e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.16582
+    MMFF Coulomb                      -40.02521
+    MMFF Bond                           7.07193
+    MMFF Bend                          27.07700
+    MMFF StretchBend                   -0.34136
+    MMFF Torsion                        3.06963
+    MMFF Improper Torsion              -0.87216
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.14565
+ Other energy terms:
+    Sheffield Solvation               -18.40913
+  ================================================================
+  Total energy                         13.73652 kcal/mol
+
+  Conformer free energy wrt ensemble       3.75 kcal/mol
+==================================================================
+
+
+Conformer  274
+  Optimized in  231 cycles; optimization information:
+    Initial:  opt_function=  1.85554e+01 ;  rms_gradient=  3.600e+00
+    Final:    opt_function=  1.36961e+01 ;  rms_gradient=  2.175e-07
+    Displacement from initial geom:   RMSD= 0.61139 ; Max displ= 1.07994
+    cpu time: 0.14000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.32e+02
+    Rotational entropy                  1.50733e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.38e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.25940
+    MMFF Coulomb                      -40.56900
+    MMFF Bond                           7.06440
+    MMFF Bend                          27.08336
+    MMFF StretchBend                   -0.32471
+    MMFF Torsion                        2.98028
+    MMFF Improper Torsion              -0.83345
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.66029
+ Other energy terms:
+    Sheffield Solvation               -17.96420
+  ================================================================
+  Total energy                         13.69609 kcal/mol
+
+  Conformer free energy wrt ensemble       3.71 kcal/mol
+==================================================================
+
+
+Conformer  277
+  Optimized in  214 cycles; optimization information:
+    Initial:  opt_function=  1.87429e+01 ;  rms_gradient=  3.453e+00
+    Final:    opt_function=  1.39906e+01 ;  rms_gradient=  2.547e-07
+    Displacement from initial geom:   RMSD= 0.26257 ; Max displ= 0.64012
+    cpu time: 0.14000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.36e+02
+    Rotational entropy                  1.51145e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.43e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.56020
+    MMFF Coulomb                      -38.86695
+    MMFF Bond                           7.09480
+    MMFF Bend                          27.07887
+    MMFF StretchBend                   -0.34305
+    MMFF Torsion                        2.85705
+    MMFF Improper Torsion              -0.88789
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.49303
+ Other energy terms:
+    Sheffield Solvation               -19.50243
+  ================================================================
+  Total energy                         13.99060 kcal/mol
+
+  Conformer free energy wrt ensemble       3.61 kcal/mol
+==================================================================
+
+
+Conformer  281
+  Optimized in  239 cycles; optimization information:
+    Initial:  opt_function=  1.86283e+01 ;  rms_gradient=  3.357e+00
+    Final:    opt_function=  1.36695e+01 ;  rms_gradient=  8.561e-08
+    Displacement from initial geom:   RMSD= 0.59307 ; Max displ= 1.17780
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.31e+02
+    Rotational entropy                  1.50390e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.37e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.10579
+    MMFF Coulomb                      -39.41514
+    MMFF Bond                           7.07032
+    MMFF Bend                          27.04202
+    MMFF StretchBend                   -0.33492
+    MMFF Torsion                        3.04053
+    MMFF Improper Torsion              -0.82044
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.68817
+ Other energy terms:
+    Sheffield Solvation               -19.01865
+  ================================================================
+  Total energy                         13.66951 kcal/mol
+
+  Conformer free energy wrt ensemble       3.81 kcal/mol
+==================================================================
+
+
+Conformer  285
+  Optimized in  252 cycles; optimization information:
+    Initial:  opt_function=  2.02612e+01 ;  rms_gradient=  3.335e+00
+    Final:    opt_function=  1.47936e+01 ;  rms_gradient=  1.679e-07
+    Displacement from initial geom:   RMSD= 0.48858 ; Max displ= 0.97838
+    cpu time: 0.16000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.34e+02
+    Rotational entropy                  1.49036e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.39e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.13366
+    MMFF Coulomb                      -37.62219
+    MMFF Bond                           7.08924
+    MMFF Bend                          28.27034
+    MMFF StretchBend                   -0.26542
+    MMFF Torsion                        2.87022
+    MMFF Improper Torsion              -0.77673
+                                     ----------
+    Ligand MMFF Intramol. Energy       34.69913
+ Other energy terms:
+    Sheffield Solvation               -19.90553
+  ================================================================
+  Total energy                         14.79360 kcal/mol
+
+  Conformer free energy wrt ensemble       4.82 kcal/mol
+==================================================================
+
+
+Conformer  288
+  Optimized in  290 cycles; optimization information:
+    Initial:  opt_function=  1.97659e+01 ;  rms_gradient=  3.449e+00
+    Final:    opt_function=  1.31922e+01 ;  rms_gradient=  2.870e-07
+    Displacement from initial geom:   RMSD= 1.38578 ; Max displ= 2.54949
+    cpu time: 0.14000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.21e+02
+    Rotational entropy                  1.48367e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.25e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           34.80198
+    MMFF Coulomb                      -41.91955
+    MMFF Bond                           7.03726
+    MMFF Bend                          28.45533
+    MMFF StretchBend                   -0.28734
+    MMFF Torsion                        3.10576
+    MMFF Improper Torsion              -0.62746
+                                     ----------
+    Ligand MMFF Intramol. Energy       30.56599
+ Other energy terms:
+    Sheffield Solvation               -17.37382
+  ================================================================
+  Total energy                         13.19217 kcal/mol
+
+  Conformer free energy wrt ensemble       4.20 kcal/mol
+==================================================================
+
+
+Conformer  294
+  Optimized in  227 cycles; optimization information:
+    Initial:  opt_function=  1.81331e+01 ;  rms_gradient=  3.543e+00
+    Final:    opt_function=  1.19582e+01 ;  rms_gradient=  9.881e-08
+    Displacement from initial geom:   RMSD= 0.59787 ; Max displ= 1.00389
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.19e+02
+    Rotational entropy                  1.49034e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.24e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.07395
+    MMFF Coulomb                      -42.40169
+    MMFF Bond                           6.99240
+    MMFF Bend                          27.67243
+    MMFF StretchBend                   -0.32985
+    MMFF Torsion                        2.88055
+    MMFF Improper Torsion              -0.78567
+                                     ----------
+    Ligand MMFF Intramol. Energy       29.10213
+ Other energy terms:
+    Sheffield Solvation               -17.14395
+  ================================================================
+  Total energy                         11.95818 kcal/mol
+
+  Conformer free energy wrt ensemble       3.06 kcal/mol
+==================================================================
+
+
+Conformer  314
+  Optimized in  221 cycles; optimization information:
+    Initial:  opt_function=  1.88465e+01 ;  rms_gradient=  3.488e+00
+    Final:    opt_function=  1.39759e+01 ;  rms_gradient=  4.769e-08
+    Displacement from initial geom:   RMSD= 0.40171 ; Max displ= 0.77171
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.34e+02
+    Rotational entropy                  1.51072e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.41e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.53298
+    MMFF Coulomb                      -40.08277
+    MMFF Bond                           7.09355
+    MMFF Bend                          27.03031
+    MMFF StretchBend                   -0.30416
+    MMFF Torsion                        2.73318
+    MMFF Improper Torsion              -0.80109
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.20200
+ Other energy terms:
+    Sheffield Solvation               -18.22613
+  ================================================================
+  Total energy                         13.97587 kcal/mol
+
+  Conformer free energy wrt ensemble       3.79 kcal/mol
+==================================================================
+
+
+Conformer  319
+  Optimized in  220 cycles; optimization information:
+    Initial:  opt_function=  1.69838e+01 ;  rms_gradient=  3.755e+00
+    Final:    opt_function=  1.15163e+01 ;  rms_gradient=  4.253e-08
+    Displacement from initial geom:   RMSD= 0.45379 ; Max displ= 0.90831
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.18e+02
+    Rotational entropy                  1.49099e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.22e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.83760
+    MMFF Coulomb                      -43.32794
+    MMFF Bond                           7.17935
+    MMFF Bend                          28.03819
+    MMFF StretchBend                   -0.37144
+    MMFF Torsion                        1.21659
+    MMFF Improper Torsion              -0.90685
+                                     ----------
+    Ligand MMFF Intramol. Energy       27.66550
+ Other energy terms:
+    Sheffield Solvation               -16.14918
+  ================================================================
+  Total energy                         11.51632 kcal/mol
+
+  Conformer free energy wrt ensemble       2.68 kcal/mol
+==================================================================
+
+
+Conformer  322
+  Optimized in  245 cycles; optimization information:
+    Initial:  opt_function=  1.87013e+01 ;  rms_gradient=  3.618e+00
+    Final:    opt_function=  1.36970e+01 ;  rms_gradient=  6.863e-08
+    Displacement from initial geom:   RMSD= 0.76732 ; Max displ= 1.68460
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.35e+02
+    Rotational entropy                  1.51038e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.42e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.56992
+    MMFF Coulomb                      -40.58949
+    MMFF Bond                           7.09162
+    MMFF Bend                          27.08102
+    MMFF StretchBend                   -0.32724
+    MMFF Torsion                        2.71055
+    MMFF Improper Torsion              -0.86961
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.66678
+ Other energy terms:
+    Sheffield Solvation               -17.96978
+  ================================================================
+  Total energy                         13.69701 kcal/mol
+
+  Conformer free energy wrt ensemble       3.39 kcal/mol
+==================================================================
+
+
+Conformer  324
+  Optimized in  231 cycles; optimization information:
+    Initial:  opt_function=  1.89304e+01 ;  rms_gradient=  3.520e+00
+    Final:    opt_function=  1.41498e+01 ;  rms_gradient=  1.907e-07
+    Displacement from initial geom:   RMSD= 0.49155 ; Max displ= 1.39390
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.36e+02
+    Rotational entropy                  1.51279e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.43e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.67083
+    MMFF Coulomb                      -38.52017
+    MMFF Bond                           7.08954
+    MMFF Bend                          27.07801
+    MMFF StretchBend                   -0.32891
+    MMFF Torsion                        2.80223
+    MMFF Improper Torsion              -0.84137
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.95015
+ Other energy terms:
+    Sheffield Solvation               -19.80038
+  ================================================================
+  Total energy                         14.14977 kcal/mol
+
+  Conformer free energy wrt ensemble       3.79 kcal/mol
+==================================================================
+
+
+Conformer  326
+  Optimized in  231 cycles; optimization information:
+    Initial:  opt_function=  1.86772e+01 ;  rms_gradient=  3.348e+00
+    Final:    opt_function=  1.38306e+01 ;  rms_gradient=  6.075e-07
+    Displacement from initial geom:   RMSD= 0.58691 ; Max displ= 1.00748
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.31e+02
+    Rotational entropy                  1.51110e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.38e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.25939
+    MMFF Coulomb                      -40.02692
+    MMFF Bond                           7.06597
+    MMFF Bend                          27.08716
+    MMFF StretchBend                   -0.31192
+    MMFF Torsion                        3.00045
+    MMFF Improper Torsion              -0.83642
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.23771
+ Other energy terms:
+    Sheffield Solvation               -18.40709
+  ================================================================
+  Total energy                         13.83062 kcal/mol
+
+  Conformer free energy wrt ensemble       3.86 kcal/mol
+==================================================================
+
+
+Conformer  328
+  Optimized in  206 cycles; optimization information:
+    Initial:  opt_function=  1.88323e+01 ;  rms_gradient=  3.462e+00
+    Final:    opt_function=  1.40684e+01 ;  rms_gradient=  9.006e-08
+    Displacement from initial geom:   RMSD= 0.23863 ; Max displ= 0.55342
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.36e+02
+    Rotational entropy                  1.51250e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.43e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.64095
+    MMFF Coulomb                      -38.86187
+    MMFF Bond                           7.09073
+    MMFF Bend                          27.08405
+    MMFF StretchBend                   -0.31404
+    MMFF Torsion                        2.78777
+    MMFF Improper Torsion              -0.85175
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.57582
+ Other energy terms:
+    Sheffield Solvation               -19.50746
+  ================================================================
+  Total energy                         14.06836 kcal/mol
+
+  Conformer free energy wrt ensemble       3.72 kcal/mol
+==================================================================
+
+
+Conformer  335
+  Optimized in  231 cycles; optimization information:
+    Initial:  opt_function=  1.87249e+01 ;  rms_gradient=  3.365e+00
+    Final:    opt_function=  1.37544e+01 ;  rms_gradient=  1.764e-07
+    Displacement from initial geom:   RMSD= 0.52900 ; Max displ= 1.06296
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.30e+02
+    Rotational entropy                  1.50635e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.37e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.19319
+    MMFF Coulomb                      -39.41653
+    MMFF Bond                           7.06703
+    MMFF Bend                          27.04740
+    MMFF StretchBend                   -0.30665
+    MMFF Torsion                        2.96825
+    MMFF Improper Torsion              -0.78163
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.77106
+ Other energy terms:
+    Sheffield Solvation               -19.01664
+  ================================================================
+  Total energy                         13.75442 kcal/mol
+
+  Conformer free energy wrt ensemble       3.92 kcal/mol
+==================================================================
+
+
+Conformer  339
+  Optimized in  338 cycles; optimization information:
+    Initial:  opt_function=  1.96382e+01 ;  rms_gradient=  3.362e+00
+    Final:    opt_function=  1.35566e+01 ;  rms_gradient=  1.935e-07
+    Displacement from initial geom:   RMSD= 1.58649 ; Max displ= 2.57203
+    cpu time: 0.15000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.26e+02
+    Rotational entropy                  1.48092e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.30e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           34.93128
+    MMFF Coulomb                      -41.73790
+    MMFF Bond                           7.00342
+    MMFF Bend                          29.05599
+    MMFF StretchBend                   -0.17939
+    MMFF Torsion                        2.79102
+    MMFF Improper Torsion              -0.75953
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.10491
+ Other energy terms:
+    Sheffield Solvation               -17.54828
+  ================================================================
+  Total energy                         13.55663 kcal/mol
+
+  Conformer free energy wrt ensemble       4.23 kcal/mol
+==================================================================
+
+
+Conformer  362
+  Optimized in  220 cycles; optimization information:
+    Initial:  opt_function=  1.83289e+01 ;  rms_gradient=  3.817e+00
+    Final:    opt_function=  1.21834e+01 ;  rms_gradient=  6.266e-08
+    Displacement from initial geom:   RMSD= 0.44423 ; Max displ= 0.80312
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.26e+02
+    Rotational entropy                  1.49347e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.31e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.06425
+    MMFF Coulomb                      -39.50446
+    MMFF Bond                           7.20725
+    MMFF Bend                          27.81035
+    MMFF StretchBend                   -0.31580
+    MMFF Torsion                        1.21439
+    MMFF Improper Torsion              -0.95514
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.52084
+ Other energy terms:
+    Sheffield Solvation               -19.33742
+  ================================================================
+  Total energy                         12.18342 kcal/mol
+
+  Conformer free energy wrt ensemble       2.75 kcal/mol
+==================================================================
+
+
+Conformer  366
+  Optimized in  250 cycles; optimization information:
+    Initial:  opt_function=  1.87653e+01 ;  rms_gradient=  3.604e+00
+    Final:    opt_function=  1.36961e+01 ;  rms_gradient=  9.641e-08
+    Displacement from initial geom:   RMSD= 0.72677 ; Max displ= 1.62322
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.32e+02
+    Rotational entropy                  1.50733e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.38e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.25940
+    MMFF Coulomb                      -40.56900
+    MMFF Bond                           7.06440
+    MMFF Bend                          27.08336
+    MMFF StretchBend                   -0.32471
+    MMFF Torsion                        2.98028
+    MMFF Improper Torsion              -0.83345
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.66029
+ Other energy terms:
+    Sheffield Solvation               -17.96420
+  ================================================================
+  Total energy                         13.69609 kcal/mol
+
+  Conformer free energy wrt ensemble       3.71 kcal/mol
+==================================================================
+
+
+Conformer  395
+  Optimized in  224 cycles; optimization information:
+    Initial:  opt_function=  1.83705e+01 ;  rms_gradient=  3.821e+00
+    Final:    opt_function=  1.22142e+01 ;  rms_gradient=  1.439e-07
+    Displacement from initial geom:   RMSD= 0.53020 ; Max displ= 0.96211
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.26e+02
+    Rotational entropy                  1.49258e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.30e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.07716
+    MMFF Coulomb                      -39.46696
+    MMFF Bond                           7.19806
+    MMFF Bend                          27.83313
+    MMFF StretchBend                   -0.28725
+    MMFF Torsion                        1.15025
+    MMFF Improper Torsion              -0.92265
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.58173
+ Other energy terms:
+    Sheffield Solvation               -19.36758
+  ================================================================
+  Total energy                         12.21416 kcal/mol
+
+  Conformer free energy wrt ensemble       2.81 kcal/mol
+==================================================================
+
+
+Conformer  402
+  Optimized in  238 cycles; optimization information:
+    Initial:  opt_function=  1.84994e+01 ;  rms_gradient=  3.613e+00
+    Final:    opt_function=  1.22357e+01 ;  rms_gradient=  1.789e-07
+    Displacement from initial geom:   RMSD= 0.60732 ; Max displ= 1.27000
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.31e+02
+    Rotational entropy                  1.49582e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.36e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.64578
+    MMFF Coulomb                      -42.76743
+    MMFF Bond                           7.02966
+    MMFF Bend                          27.61919
+    MMFF StretchBend                   -0.33630
+    MMFF Torsion                        2.63808
+    MMFF Improper Torsion              -0.77356
+                                     ----------
+    Ligand MMFF Intramol. Energy       29.05542
+ Other energy terms:
+    Sheffield Solvation               -16.81971
+  ================================================================
+  Total energy                         12.23571 kcal/mol
+
+  Conformer free energy wrt ensemble       2.37 kcal/mol
+==================================================================
+
+
+Conformer  409
+  Optimized in  268 cycles; optimization information:
+    Initial:  opt_function=  1.97330e+01 ;  rms_gradient=  3.377e+00
+    Final:    opt_function=  1.37882e+01 ;  rms_gradient=  7.649e-07
+    Displacement from initial geom:   RMSD= 1.12926 ; Max displ= 2.08145
+    cpu time: 0.14000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.16e+02
+    Rotational entropy                  1.47791e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.20e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           34.28950
+    MMFF Coulomb                      -41.23570
+    MMFF Bond                           6.89242
+    MMFF Bend                          29.53075
+    MMFF StretchBend                   -0.14818
+    MMFF Torsion                        3.08921
+    MMFF Improper Torsion              -0.77098
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.64703
+ Other energy terms:
+    Sheffield Solvation               -17.85886
+  ================================================================
+  Total energy                         13.78816 kcal/mol
+
+  Conformer free energy wrt ensemble       5.31 kcal/mol
+==================================================================
+
+
+Conformer  447
+  Optimized in  218 cycles; optimization information:
+    Initial:  opt_function=  1.89545e+01 ;  rms_gradient=  3.516e+00
+    Final:    opt_function=  1.36881e+01 ;  rms_gradient=  3.846e-08
+    Displacement from initial geom:   RMSD= 0.29111 ; Max displ= 0.79186
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.34e+02
+    Rotational entropy                  1.51162e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.40e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.41148
+    MMFF Coulomb                      -39.48803
+    MMFF Bond                           7.10243
+    MMFF Bend                          27.05833
+    MMFF StretchBend                   -0.34039
+    MMFF Torsion                        2.75369
+    MMFF Improper Torsion              -0.83888
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.65863
+ Other energy terms:
+    Sheffield Solvation               -18.97056
+  ================================================================
+  Total energy                         13.68807 kcal/mol
+
+  Conformer free energy wrt ensemble       3.51 kcal/mol
+==================================================================
+
+
+Conformer  454
+  Optimized in  220 cycles; optimization information:
+    Initial:  opt_function=  1.90338e+01 ;  rms_gradient=  3.521e+00
+    Final:    opt_function=  1.36136e+01 ;  rms_gradient=  1.032e-07
+    Displacement from initial geom:   RMSD= 0.41066 ; Max displ= 0.85608
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.30e+02
+    Rotational entropy                  1.50344e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.36e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.93766
+    MMFF Coulomb                      -40.10283
+    MMFF Bond                           7.07728
+    MMFF Bend                          27.00409
+    MMFF StretchBend                   -0.34997
+    MMFF Torsion                        3.05553
+    MMFF Improper Torsion              -0.84523
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.77653
+ Other energy terms:
+    Sheffield Solvation               -18.16289
+  ================================================================
+  Total energy                         13.61364 kcal/mol
+
+  Conformer free energy wrt ensemble       3.81 kcal/mol
+==================================================================
+
+
+Conformer  457
+  Optimized in  247 cycles; optimization information:
+    Initial:  opt_function=  1.89776e+01 ;  rms_gradient=  3.594e+00
+    Final:    opt_function=  1.38526e+01 ;  rms_gradient=  1.255e-07
+    Displacement from initial geom:   RMSD= 0.68900 ; Max displ= 1.73942
+    cpu time: 0.15000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.32e+02
+    Rotational entropy                  1.50717e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.39e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.27740
+    MMFF Coulomb                      -40.59676
+    MMFF Bond                           7.05917
+    MMFF Bend                          27.09616
+    MMFF StretchBend                   -0.32744
+    MMFF Torsion                        2.99172
+    MMFF Improper Torsion              -0.83392
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.66632
+ Other energy terms:
+    Sheffield Solvation               -17.81368
+  ================================================================
+  Total energy                         13.85265 kcal/mol
+
+  Conformer free energy wrt ensemble       3.85 kcal/mol
+==================================================================
+
+
+Conformer  495
+  Optimized in  222 cycles; optimization information:
+    Initial:  opt_function=  1.90111e+01 ;  rms_gradient=  3.489e+00
+    Final:    opt_function=  1.39120e+01 ;  rms_gradient=  8.972e-08
+    Displacement from initial geom:   RMSD= 0.31248 ; Max displ= 0.71756
+    cpu time: 0.14000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.36e+02
+    Rotational entropy                  1.50617e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.43e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.54105
+    MMFF Coulomb                      -39.92745
+    MMFF Bond                           7.09436
+    MMFF Bend                          27.15529
+    MMFF StretchBend                   -0.34621
+    MMFF Torsion                        2.76677
+    MMFF Improper Torsion              -0.88712
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.39669
+ Other energy terms:
+    Sheffield Solvation               -18.48466
+  ================================================================
+  Total energy                         13.91203 kcal/mol
+
+  Conformer free energy wrt ensemble       3.55 kcal/mol
+==================================================================
+
+
+Conformer  513
+  Optimized in  210 cycles; optimization information:
+    Initial:  opt_function=  1.90145e+01 ;  rms_gradient=  3.525e+00
+    Final:    opt_function=  1.35912e+01 ;  rms_gradient=  4.386e-08
+    Displacement from initial geom:   RMSD= 0.29324 ; Max displ= 0.77109
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.30e+02
+    Rotational entropy                  1.50799e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.37e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.06084
+    MMFF Coulomb                      -39.49046
+    MMFF Bond                           7.07563
+    MMFF Bend                          27.01931
+    MMFF StretchBend                   -0.33501
+    MMFF Torsion                        3.03868
+    MMFF Improper Torsion              -0.81996
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.54902
+ Other energy terms:
+    Sheffield Solvation               -18.95787
+  ================================================================
+  Total energy                         13.59116 kcal/mol
+
+  Conformer free energy wrt ensemble       3.76 kcal/mol
+==================================================================
+
+
+Conformer  526
+  Optimized in  257 cycles; optimization information:
+    Initial:  opt_function=  1.84279e+01 ;  rms_gradient=  3.540e+00
+    Final:    opt_function=  1.19386e+01 ;  rms_gradient=  2.531e-07
+    Displacement from initial geom:   RMSD= 1.06279 ; Max displ= 2.03647
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.21e+02
+    Rotational entropy                  1.49107e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.25e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.13764
+    MMFF Coulomb                      -42.83888
+    MMFF Bond                           7.00126
+    MMFF Bend                          27.66782
+    MMFF StretchBend                   -0.34676
+    MMFF Torsion                        2.97741
+    MMFF Improper Torsion              -0.83583
+                                     ----------
+    Ligand MMFF Intramol. Energy       28.76266
+ Other energy terms:
+    Sheffield Solvation               -16.82404
+  ================================================================
+  Total energy                         11.93862 kcal/mol
+
+  Conformer free energy wrt ensemble       2.92 kcal/mol
+==================================================================
+
+
+Conformer  530
+  Optimized in  214 cycles; optimization information:
+    Initial:  opt_function=  1.90681e+01 ;  rms_gradient=  3.495e+00
+    Final:    opt_function=  1.37321e+01 ;  rms_gradient=  1.471e-07
+    Displacement from initial geom:   RMSD= 0.29579 ; Max displ= 0.64828
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.32e+02
+    Rotational entropy                  1.50524e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.38e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.06086
+    MMFF Coulomb                      -38.77870
+    MMFF Bond                           7.07353
+    MMFF Bend                          27.05990
+    MMFF StretchBend                   -0.35776
+    MMFF Torsion                        3.10641
+    MMFF Improper Torsion              -0.88986
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.27438
+ Other energy terms:
+    Sheffield Solvation               -19.54231
+  ================================================================
+  Total energy                         13.73207 kcal/mol
+
+  Conformer free energy wrt ensemble       3.77 kcal/mol
+==================================================================
+
+
+Conformer  556
+  Optimized in  209 cycles; optimization information:
+    Initial:  opt_function=  1.90618e+01 ;  rms_gradient=  3.524e+00
+    Final:    opt_function=  1.37846e+01 ;  rms_gradient=  8.980e-08
+    Displacement from initial geom:   RMSD= 0.27353 ; Max displ= 0.57066
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.33e+02
+    Rotational entropy                  1.51207e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.40e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.50775
+    MMFF Coulomb                      -39.48917
+    MMFF Bond                           7.09796
+    MMFF Bend                          27.06729
+    MMFF StretchBend                   -0.31171
+    MMFF Torsion                        2.68067
+    MMFF Improper Torsion              -0.79950
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.75330
+ Other energy terms:
+    Sheffield Solvation               -18.96870
+  ================================================================
+  Total energy                         13.78460 kcal/mol
+
+  Conformer free energy wrt ensemble       3.63 kcal/mol
+==================================================================
+
+
+Conformer  569
+  Optimized in  216 cycles; optimization information:
+    Initial:  opt_function=  1.91545e+01 ;  rms_gradient=  3.528e+00
+    Final:    opt_function=  1.37136e+01 ;  rms_gradient=  1.044e-07
+    Displacement from initial geom:   RMSD= 0.37836 ; Max displ= 0.71208
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.30e+02
+    Rotational entropy                  1.50540e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.36e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.03661
+    MMFF Coulomb                      -40.10038
+    MMFF Bond                           7.07260
+    MMFF Bend                          27.01323
+    MMFF StretchBend                   -0.32090
+    MMFF Torsion                        2.98256
+    MMFF Improper Torsion              -0.80531
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.87842
+ Other energy terms:
+    Sheffield Solvation               -18.16484
+  ================================================================
+  Total energy                         13.71358 kcal/mol
+
+  Conformer free energy wrt ensemble       3.94 kcal/mol
+==================================================================
+
+
+Conformer  571
+  Optimized in  232 cycles; optimization information:
+    Initial:  opt_function=  1.80780e+01 ;  rms_gradient=  3.829e+00
+    Final:    opt_function=  1.26130e+01 ;  rms_gradient=  1.202e-07
+    Displacement from initial geom:   RMSD= 0.45340 ; Max displ= 0.78181
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.38e+02
+    Rotational entropy                  1.50290e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.44e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.90382
+    MMFF Coulomb                      -43.27453
+    MMFF Bond                           7.24919
+    MMFF Bend                          28.00515
+    MMFF StretchBend                   -0.32846
+    MMFF Torsion                        1.08012
+    MMFF Improper Torsion              -0.86443
+                                     ----------
+    Ligand MMFF Intramol. Energy       28.77086
+ Other energy terms:
+    Sheffield Solvation               -16.15782
+  ================================================================
+  Total energy                         12.61304 kcal/mol
+
+  Conformer free energy wrt ensemble       2.16 kcal/mol
+==================================================================
+
+
+Conformer  575
+  Optimized in  213 cycles; optimization information:
+    Initial:  opt_function=  1.90979e+01 ;  rms_gradient=  3.500e+00
+    Final:    opt_function=  1.38250e+01 ;  rms_gradient=  1.667e-07
+    Displacement from initial geom:   RMSD= 0.33720 ; Max displ= 0.67432
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.33e+02
+    Rotational entropy                  1.50499e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.39e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.20770
+    MMFF Coulomb                      -39.96144
+    MMFF Bond                           7.06674
+    MMFF Bend                          27.12124
+    MMFF StretchBend                   -0.34039
+    MMFF Torsion                        3.05370
+    MMFF Improper Torsion              -0.87077
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.27676
+ Other energy terms:
+    Sheffield Solvation               -18.45174
+  ================================================================
+  Total energy                         13.82501 kcal/mol
+
+  Conformer free energy wrt ensemble       3.82 kcal/mol
+==================================================================
+
+
+Conformer  576
+  Optimized in  213 cycles; optimization information:
+    Initial:  opt_function=  1.90987e+01 ;  rms_gradient=  3.498e+00
+    Final:    opt_function=  1.39888e+01 ;  rms_gradient=  3.946e-07
+    Displacement from initial geom:   RMSD= 0.30595 ; Max displ= 0.55019
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.36e+02
+    Rotational entropy                  1.50837e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.42e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.62103
+    MMFF Coulomb                      -39.92734
+    MMFF Bond                           7.09014
+    MMFF Bend                          27.16057
+    MMFF StretchBend                   -0.31730
+    MMFF Torsion                        2.69751
+    MMFF Improper Torsion              -0.85131
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.47331
+ Other energy terms:
+    Sheffield Solvation               -18.48447
+  ================================================================
+  Total energy                         13.98884 kcal/mol
+
+  Conformer free energy wrt ensemble       3.65 kcal/mol
+==================================================================
+
+
+Conformer  588
+  Optimized in  258 cycles; optimization information:
+    Initial:  opt_function=  1.90543e+01 ;  rms_gradient=  3.637e+00
+    Final:    opt_function=  1.38491e+01 ;  rms_gradient=  6.332e-08
+    Displacement from initial geom:   RMSD= 0.85036 ; Max displ= 1.78431
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.36e+02
+    Rotational entropy                  1.51013e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.42e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.57102
+    MMFF Coulomb                      -40.55588
+    MMFF Bond                           7.08712
+    MMFF Bend                          27.08854
+    MMFF StretchBend                   -0.33088
+    MMFF Torsion                        2.72597
+    MMFF Improper Torsion              -0.87105
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.71485
+ Other energy terms:
+    Sheffield Solvation               -17.86575
+  ================================================================
+  Total energy                         13.84910 kcal/mol
+
+  Conformer free energy wrt ensemble       3.52 kcal/mol
+==================================================================
+
+
+Conformer  615
+  Optimized in  206 cycles; optimization information:
+    Initial:  opt_function=  1.91576e+01 ;  rms_gradient=  3.503e+00
+    Final:    opt_function=  1.38109e+01 ;  rms_gradient=  7.523e-08
+    Displacement from initial geom:   RMSD= 0.25139 ; Max displ= 0.59185
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.31e+02
+    Rotational entropy                  1.50668e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.38e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.14239
+    MMFF Coulomb                      -38.77344
+    MMFF Bond                           7.06923
+    MMFF Bend                          27.06519
+    MMFF StretchBend                   -0.32872
+    MMFF Torsion                        3.03686
+    MMFF Improper Torsion              -0.85325
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.35825
+ Other energy terms:
+    Sheffield Solvation               -19.54740
+  ================================================================
+  Total energy                         13.81085 kcal/mol
+
+  Conformer free energy wrt ensemble       3.87 kcal/mol
+==================================================================
+
+
+Conformer  638
+  Optimized in  216 cycles; optimization information:
+    Initial:  opt_function=  1.91338e+01 ;  rms_gradient=  3.533e+00
+    Final:    opt_function=  1.36938e+01 ;  rms_gradient=  7.495e-09
+    Displacement from initial geom:   RMSD= 0.30583 ; Max displ= 0.64756
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.30e+02
+    Rotational entropy                  1.50965e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.36e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.16245
+    MMFF Coulomb                      -39.49194
+    MMFF Bond                           7.07060
+    MMFF Bend                          27.02936
+    MMFF StretchBend                   -0.30614
+    MMFF Torsion                        2.96576
+    MMFF Improper Torsion              -0.78045
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.64963
+ Other energy terms:
+    Sheffield Solvation               -18.95583
+  ================================================================
+  Total energy                         13.69381 kcal/mol
+
+  Conformer free energy wrt ensemble       3.89 kcal/mol
+==================================================================
+
+
+Conformer  678
+  Optimized in  213 cycles; optimization information:
+    Initial:  opt_function=  1.91849e+01 ;  rms_gradient=  3.509e+00
+    Final:    opt_function=  1.39012e+01 ;  rms_gradient=  2.372e-07
+    Displacement from initial geom:   RMSD= 0.36106 ; Max displ= 0.63454
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.32e+02
+    Rotational entropy                  1.50753e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.38e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.28723
+    MMFF Coulomb                      -39.96144
+    MMFF Bond                           7.06257
+    MMFF Bend                          27.12643
+    MMFF StretchBend                   -0.31151
+    MMFF Torsion                        2.98446
+    MMFF Improper Torsion              -0.83501
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.35273
+ Other energy terms:
+    Sheffield Solvation               -18.45149
+  ================================================================
+  Total energy                         13.90124 kcal/mol
+
+  Conformer free energy wrt ensemble       3.92 kcal/mol
+==================================================================
+
+
+Conformer  682
+  Optimized in  217 cycles; optimization information:
+    Initial:  opt_function=  1.91996e+01 ;  rms_gradient=  3.614e+00
+    Final:    opt_function=  1.39108e+01 ;  rms_gradient=  2.662e-07
+    Displacement from initial geom:   RMSD= 0.42511 ; Max displ= 0.91672
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.35e+02
+    Rotational entropy                  1.50596e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.41e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.47879
+    MMFF Coulomb                      -39.96402
+    MMFF Bond                           7.09101
+    MMFF Bend                          27.05273
+    MMFF StretchBend                   -0.34270
+    MMFF Torsion                        2.77485
+    MMFF Improper Torsion              -0.81612
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.27453
+ Other energy terms:
+    Sheffield Solvation               -18.36377
+  ================================================================
+  Total energy                         13.91076 kcal/mol
+
+  Conformer free energy wrt ensemble       3.68 kcal/mol
+==================================================================
+
+
+Conformer  687
+  Optimized in  222 cycles; optimization information:
+    Initial:  opt_function=  1.92863e+01 ;  rms_gradient=  3.588e+00
+    Final:    opt_function=  1.40622e+01 ;  rms_gradient=  3.261e-08
+    Displacement from initial geom:   RMSD= 0.39027 ; Max displ= 0.72108
+    cpu time: 0.14000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.36e+02
+    Rotational entropy                  1.51173e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.43e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.58182
+    MMFF Coulomb                      -38.52102
+    MMFF Bond                           7.09467
+    MMFF Bend                          27.06843
+    MMFF StretchBend                   -0.35773
+    MMFF Torsion                        2.87167
+    MMFF Improper Torsion              -0.87786
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.85998
+ Other energy terms:
+    Sheffield Solvation               -19.79780
+  ================================================================
+  Total energy                         14.06219 kcal/mol
+
+  Conformer free energy wrt ensemble       3.68 kcal/mol
+==================================================================
+
+
+Conformer  701
+  Optimized in  234 cycles; optimization information:
+    Initial:  opt_function=  1.86755e+01 ;  rms_gradient=  3.822e+00
+    Final:    opt_function=  1.23372e+01 ;  rms_gradient=  8.629e-08
+    Displacement from initial geom:   RMSD= 0.55300 ; Max displ= 1.19027
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.28e+02
+    Rotational entropy                  1.49511e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.33e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.29130
+    MMFF Coulomb                      -40.91506
+    MMFF Bond                           7.22013
+    MMFF Bend                          27.83706
+    MMFF StretchBend                   -0.30567
+    MMFF Torsion                        1.28049
+    MMFF Improper Torsion              -1.03143
+                                     ----------
+    Ligand MMFF Intramol. Energy       30.37683
+ Other energy terms:
+    Sheffield Solvation               -18.03962
+  ================================================================
+  Total energy                         12.33721 kcal/mol
+
+  Conformer free energy wrt ensemble       2.73 kcal/mol
+==================================================================
+
+
+Conformer  754
+  Optimized in  273 cycles; optimization information:
+    Initial:  opt_function=  2.00721e+01 ;  rms_gradient=  3.387e+00
+    Final:    opt_function=  1.39637e+01 ;  rms_gradient=  4.320e-07
+    Displacement from initial geom:   RMSD= 1.11045 ; Max displ= 1.81776
+    cpu time: 0.14000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.18e+02
+    Rotational entropy                  1.48035e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.22e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           34.45306
+    MMFF Coulomb                      -41.33400
+    MMFF Bond                           6.87994
+    MMFF Bend                          29.63496
+    MMFF StretchBend                   -0.12328
+    MMFF Torsion                        2.96506
+    MMFF Improper Torsion              -0.73093
+                                     ----------
+    Ligand MMFF Intramol. Energy       31.74481
+ Other energy terms:
+    Sheffield Solvation               -17.78116
+  ================================================================
+  Total energy                         13.96365 kcal/mol
+
+  Conformer free energy wrt ensemble       5.30 kcal/mol
+==================================================================
+
+
+Conformer  785
+  Optimized in  217 cycles; optimization information:
+    Initial:  opt_function=  1.92978e+01 ;  rms_gradient=  3.622e+00
+    Final:    opt_function=  1.39998e+01 ;  rms_gradient=  5.107e-08
+    Displacement from initial geom:   RMSD= 0.45226 ; Max displ= 0.71938
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.34e+02
+    Rotational entropy                  1.50806e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.41e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.57017
+    MMFF Coulomb                      -39.96154
+    MMFF Bond                           7.08722
+    MMFF Bend                          27.06012
+    MMFF StretchBend                   -0.31434
+    MMFF Torsion                        2.70162
+    MMFF Improper Torsion              -0.77702
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.36623
+ Other energy terms:
+    Sheffield Solvation               -18.36639
+  ================================================================
+  Total energy                         13.99984 kcal/mol
+
+  Conformer free energy wrt ensemble       3.79 kcal/mol
+==================================================================
+
+
+Conformer  789
+  Optimized in  215 cycles; optimization information:
+    Initial:  opt_function=  1.93787e+01 ;  rms_gradient=  3.592e+00
+    Final:    opt_function=  1.41498e+01 ;  rms_gradient=  2.433e-07
+    Displacement from initial geom:   RMSD= 0.41275 ; Max displ= 0.73008
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.36e+02
+    Rotational entropy                  1.51279e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.43e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.67083
+    MMFF Coulomb                      -38.52017
+    MMFF Bond                           7.08954
+    MMFF Bend                          27.07801
+    MMFF StretchBend                   -0.32891
+    MMFF Torsion                        2.80223
+    MMFF Improper Torsion              -0.84137
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.95015
+ Other energy terms:
+    Sheffield Solvation               -19.80038
+  ================================================================
+  Total energy                         14.14977 kcal/mol
+
+  Conformer free energy wrt ensemble       3.79 kcal/mol
+==================================================================
+
+
+Conformer  798
+  Optimized in  223 cycles; optimization information:
+    Initial:  opt_function=  1.87690e+01 ;  rms_gradient=  3.784e+00
+    Final:    opt_function=  1.29908e+01 ;  rms_gradient=  1.744e-08
+    Displacement from initial geom:   RMSD= 0.36691 ; Max displ= 0.81574
+    cpu time: 0.14000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.35e+02
+    Rotational entropy                  1.50481e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.41e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.78041
+    MMFF Coulomb                      -39.24727
+    MMFF Bond                           7.20114
+    MMFF Bend                          27.83402
+    MMFF StretchBend                   -0.31760
+    MMFF Torsion                        0.98952
+    MMFF Improper Torsion              -0.82387
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.41637
+ Other energy terms:
+    Sheffield Solvation               -19.42555
+  ================================================================
+  Total energy                         12.99081 kcal/mol
+
+  Conformer free energy wrt ensemble       2.78 kcal/mol
+==================================================================
+
+
+Conformer  836
+  Optimized in  218 cycles; optimization information:
+    Initial:  opt_function=  1.95500e+01 ;  rms_gradient=  3.675e+00
+    Final:    opt_function=  1.37020e+01 ;  rms_gradient=  4.199e-08
+    Displacement from initial geom:   RMSD= 0.36784 ; Max displ= 0.63266
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.30e+02
+    Rotational entropy                  1.50184e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.36e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.09228
+    MMFF Coulomb                      -39.96150
+    MMFF Bond                           7.06991
+    MMFF Bend                          27.00084
+    MMFF StretchBend                   -0.34591
+    MMFF Torsion                        3.05901
+    MMFF Improper Torsion              -0.84063
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.07401
+ Other energy terms:
+    Sheffield Solvation               -18.37205
+  ================================================================
+  Total energy                         13.70197 kcal/mol
+
+  Conformer free energy wrt ensemble       3.91 kcal/mol
+==================================================================
+
+
+Conformer  843
+  Optimized in  217 cycles; optimization information:
+    Initial:  opt_function=  1.96282e+01 ;  rms_gradient=  3.649e+00
+    Final:    opt_function=  1.38517e+01 ;  rms_gradient=  1.570e-07
+    Displacement from initial geom:   RMSD= 0.39245 ; Max displ= 0.69836
+    cpu time: 0.11000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.31e+02
+    Rotational entropy                  1.50756e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.38e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.19362
+    MMFF Coulomb                      -38.59113
+    MMFF Bond                           7.07506
+    MMFF Bend                          27.01874
+    MMFF StretchBend                   -0.36080
+    MMFF Torsion                        3.15536
+    MMFF Improper Torsion              -0.90492
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.58592
+ Other energy terms:
+    Sheffield Solvation               -19.73420
+  ================================================================
+  Total energy                         13.85172 kcal/mol
+
+  Conformer free energy wrt ensemble       3.92 kcal/mol
+==================================================================
+
+
+Conformer  844
+  Optimized in  245 cycles; optimization information:
+    Initial:  opt_function=  1.87771e+01 ;  rms_gradient=  3.386e+00
+    Final:    opt_function=  1.22730e+01 ;  rms_gradient=  8.728e-08
+    Displacement from initial geom:   RMSD= 0.70670 ; Max displ= 1.44375
+    cpu time: 0.13000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.29e+02
+    Rotational entropy                  1.49471e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.34e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.58240
+    MMFF Coulomb                      -42.13887
+    MMFF Bond                           7.02112
+    MMFF Bend                          27.64362
+    MMFF StretchBend                   -0.31666
+    MMFF Torsion                        2.49897
+    MMFF Improper Torsion              -0.71449
+                                     ----------
+    Ligand MMFF Intramol. Energy       29.57609
+ Other energy terms:
+    Sheffield Solvation               -17.30313
+  ================================================================
+  Total energy                         12.27296 kcal/mol
+
+  Conformer free energy wrt ensemble       2.58 kcal/mol
+==================================================================
+
+
+Conformer  887
+  Optimized in  236 cycles; optimization information:
+    Initial:  opt_function=  1.88050e+01 ;  rms_gradient=  3.396e+00
+    Final:    opt_function=  1.19582e+01 ;  rms_gradient=  9.833e-08
+    Displacement from initial geom:   RMSD= 0.61663 ; Max displ= 1.36146
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.19e+02
+    Rotational entropy                  1.49034e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.24e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           35.07395
+    MMFF Coulomb                      -42.40169
+    MMFF Bond                           6.99240
+    MMFF Bend                          27.67243
+    MMFF StretchBend                   -0.32985
+    MMFF Torsion                        2.88055
+    MMFF Improper Torsion              -0.78567
+                                     ----------
+    Ligand MMFF Intramol. Energy       29.10213
+ Other energy terms:
+    Sheffield Solvation               -17.14395
+  ================================================================
+  Total energy                         11.95818 kcal/mol
+
+  Conformer free energy wrt ensemble       3.06 kcal/mol
+==================================================================
+
+
+Conformer  889
+  Optimized in  215 cycles; optimization information:
+    Initial:  opt_function=  1.88354e+01 ;  rms_gradient=  3.788e+00
+    Final:    opt_function=  1.30677e+01 ;  rms_gradient=  8.550e-07
+    Displacement from initial geom:   RMSD= 0.41410 ; Max displ= 0.83872
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.34e+02
+    Rotational entropy                  1.50635e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.40e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.85981
+    MMFF Coulomb                      -39.24466
+    MMFF Bond                           7.19623
+    MMFF Bend                          27.83778
+    MMFF StretchBend                   -0.28914
+    MMFF Torsion                        0.91967
+    MMFF Improper Torsion              -0.78460
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.49510
+ Other energy terms:
+    Sheffield Solvation               -19.42736
+  ================================================================
+  Total energy                         13.06774 kcal/mol
+
+  Conformer free energy wrt ensemble       2.88 kcal/mol
+==================================================================
+
+
+Conformer  931
+  Optimized in  249 cycles; optimization information:
+    Initial:  opt_function=  1.96422e+01 ;  rms_gradient=  3.500e+00
+    Final:    opt_function=  1.37932e+01 ;  rms_gradient=  1.909e-07
+    Displacement from initial geom:   RMSD= 0.90891 ; Max displ= 1.50619
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.31e+02
+    Rotational entropy                  1.50623e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.38e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.11092
+    MMFF Coulomb                      -39.93957
+    MMFF Bond                           7.07107
+    MMFF Bend                          27.03850
+    MMFF StretchBend                   -0.32887
+    MMFF Torsion                        3.04033
+    MMFF Improper Torsion              -0.85258
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.13980
+ Other energy terms:
+    Sheffield Solvation               -18.34660
+  ================================================================
+  Total energy                         13.79320 kcal/mol
+
+  Conformer free energy wrt ensemble       3.87 kcal/mol
+==================================================================
+
+
+Conformer  952
+  Optimized in  221 cycles; optimization information:
+    Initial:  opt_function=  1.96484e+01 ;  rms_gradient=  3.683e+00
+    Final:    opt_function=  1.37908e+01 ;  rms_gradient=  3.862e-07
+    Displacement from initial geom:   RMSD= 0.40171 ; Max displ= 0.78380
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.30e+02
+    Rotational entropy                  1.50312e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.35e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.18325
+    MMFF Coulomb                      -39.95860
+    MMFF Bond                           7.06625
+    MMFF Bend                          27.00861
+    MMFF StretchBend                   -0.31753
+    MMFF Torsion                        2.98553
+    MMFF Improper Torsion              -0.80167
+                                     ----------
+    Ligand MMFF Intramol. Energy       32.16584
+ Other energy terms:
+    Sheffield Solvation               -18.37505
+  ================================================================
+  Total energy                         13.79080 kcal/mol
+
+  Conformer free energy wrt ensemble       4.03 kcal/mol
+==================================================================
+
+
+Conformer  957
+  Optimized in  221 cycles; optimization information:
+    Initial:  opt_function=  1.97210e+01 ;  rms_gradient=  3.653e+00
+    Final:    opt_function=  1.39382e+01 ;  rms_gradient=  2.086e-07
+    Displacement from initial geom:   RMSD= 0.44998 ; Max displ= 0.80056
+    cpu time: 0.12000
+
+  Unweighted configurational entropy:
+    Vibrational entropy                 4.31e+02
+    Rotational entropy                  1.50776e+02
+    Translational entropy               1.55625e+02
+                                        --------
+    Total config. entropy S             7.37e+02 J/(mol K)
+
+ Overall MMFF energy terms:
+    MMFF VdW                           36.28223
+    MMFF Coulomb                      -38.59003
+    MMFF Bond                           7.06986
+    MMFF Bend                          27.02753
+    MMFF StretchBend                   -0.33204
+    MMFF Torsion                        3.08669
+    MMFF Improper Torsion              -0.86887
+                                     ----------
+    Ligand MMFF Intramol. Energy       33.67538
+ Other energy terms:
+    Sheffield Solvation               -19.73716
+  ================================================================
+  Total energy                         13.93823 kcal/mol
+
+  Conformer free energy wrt ensemble       4.03 kcal/mol
+==================================================================
