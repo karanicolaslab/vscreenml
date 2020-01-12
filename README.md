@@ -10,11 +10,11 @@ In order to use this tool, it's better to build Rosetta from scratch. Once Roset
 2. mkdir "vscreenml_rosetta_extension"
 3.  copy vscreenml_rosetta_extension/vscrenml_interface_ddg.cc into path/to/Rosetta/main/source/src/apps/pilot/vscreenml_rosetta_extension
 4. add the json formated text below to path/to/Rosetta/main/source/src/pilot_apps.src.settings.all
-'''
+```
 "pilot/vscreenml_rosetta_extension" : [ 
                 "vscrenml_interface_ddg",
         ],
- '''       
+ ```       
 /mnt/shared_applications/Rosetta_JKlab/Rosetta/main/source/src/pilot_apps.src.settings.all
 5. Compile Rosetta
 
