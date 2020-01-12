@@ -1,6 +1,6 @@
 # vscreenml
 ## Description
-This repository contains the implementation of a novel machine learning classifier trained on the Dataset of Congruent Inhibitors and Decoys (D-COID)) 
+This repository contains the implementation of a novel machine learning classifier trained on the Dataset of Congruent Inhibitors and Decoys (D-COID)).  
 ## Dependencies
 ### Rosetta (version 3)
 Request license here https://els.comotion.uw.edu/express_license_technologies/rosetta (academic license is free). Once you obtain the license, you can download Rosetta here https://www.rosettacommons.org/software/license-and-download .
