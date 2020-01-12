@@ -14,8 +14,7 @@ In order to use this tool, it's better to build Rosetta from scratch. Once Roset
 "pilot/vscreenml_rosetta_extension" : [ 
                 "vscrenml_interface_ddg",
         ],
- ```       
-/mnt/shared_applications/Rosetta_JKlab/Rosetta/main/source/src/pilot_apps.src.settings.all
+ ```      
 5. Compile Rosetta
 
 ### OpenEye OMEGA and Szybki
