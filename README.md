@@ -51,9 +51,11 @@ conda create --name myenv --file requirements.txt
 Install all the above dependencies and update configuration/congif.py file paths pointing to this dependencies.
 
 Once all the dependencies have been installed, vscreenml is ready to use.
+
 Usage:
-```
-#For example, in order go get the vscreenml score of "mini_complex_sample.pdb" present in "test" directory
+
+For example, in order go get the vscreenml score of "mini_complex_sample.pdb" present in "test" directory
+```python
 python vscreenmlscore.py test sample
 
 ```
