@@ -32,7 +32,7 @@ scons bin mode=release
 ### OpenEye OMEGA and Szybki
 OpenEye is not a free software, however free academic licence can be obtained here https://www.eyesopen.com/
 ### Openbabel
-
+Already contained in the requirements.txt file
 ### ChemAxon calcx, structurecheck
 ChemAxon tools are not free, however free academic licence can be obtained here https://chemaxon.com/academic-license
 ### MGLTOOLS
