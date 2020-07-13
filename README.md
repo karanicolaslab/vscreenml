@@ -37,7 +37,7 @@ Before you begin, ensure you have met the following requirements:
             ],
           ```
         5. Compile Rosetta by changing to the source directory and running:
-          ```
+          ```python
           scons bin mode=release
           ```
 ## Installing vScreenML
@@ -55,7 +55,7 @@ Once all the dependencies have been installed, vscreenml is ready to use.
 
 To use vScreenML, follow these steps:
 For example, in order go get the vscreenml score of "mini_complex_sample.pdb" present in "test" directory
-    ```python
+    ```
     python vscreenmlscore.py test sample
     ```
 Add run commands and examples you think users will find useful. Provide an options reference for bonus points!
