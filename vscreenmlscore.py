@@ -39,5 +39,3 @@ with open(cfg.VSCREENML+'/model/XGB_CLASSIFIER_alldata.pickle.dat', 'rb') as f:
 
 df = pd.DataFrame(data=data, columns=predictors)
 predict(clf, filetag, df)
-
-

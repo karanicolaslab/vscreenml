@@ -13,7 +13,7 @@ class VscreenMLFeaturizer(object):
         self.folder = folder
         self.feature_list = []
         self.purpose = 'This featurizes protein-ligand complexes for vscreenml scoring'
-        
+
     def prepare_protein_and_ligand_for_scoring(self):
         #Extract ligands and protein structures
         p=subprocess.Popen('grep -E \"ATOM|ZN|MG|MN\" '+self.folder+'/mini_complex_'+self.filetag+'.pdb > ' +self.folder+'/mini_complex_'+self.filetag+'_unb.pdb && grep HETATM '+self.folder+'/mini_complex_'+self.filetag+'.pdb|grep -v \'ZN\'|grep -v \'MG\'|grep -v \'MN\' > '+self.folder+'/mini_complex_'+self.filetag+'_lig.pdb',shell=True)
@@ -39,17 +39,17 @@ class VscreenMLFeaturizer(object):
         try:
             p_rosetta = subprocess.Popen(cfg.ROSETTA_DIR+'/main/source/bin/minimize_ppi.'+cfg.ROSETTA_BUILD+' -s '+self.folder+'/mini_complex_'+self.filetag+'.pdb -extra_res_fa '+self.folder+'/'+self.filetag+'.params -database '+cfg.ROSETTA_DIR+'/main/database -ignore_zero_occupancy false -score_only |grep \'Interface_Scores:mini\' |awk \'{print $4,$5,$6,$7,$8}\' ', shell=True, stdout= subprocess.PIPE)
             rosetta = p_rosetta.communicate()[0].split()
-	
+
         except:
             #use typical value (median) from the training set to impute missing value
             rosetta= ['-23.6933', '719.7050', '1.0000', '0.6410', '4.0000']
-            
-       # print(rosetta) 
+
+       # print(rosetta)
        #Interface_Energy = rosetta[0], Total_BSA = rosetta[1], Interface_HB = rosetta[2], Total_packstats = rosetta[3], #Interface_unsat =rosetta[4]
         return rosetta[0], rosetta[1], rosetta[2], rosetta[3], rosetta[4]
 
     def calculate_sasa(self):
-        #calculating sasa   
+        #calculating sasa
         try:
             p_sasa = subprocess.Popen(cfg.ROSETTA_DIR+'/main/source/bin/ragul_get_ligand_sasa.'+cfg.ROSETTA_BUILD+' -database '+cfg.ROSETTA_DIR+'/main/database -input_bound_pdb '+self.folder+'/mini_complex_'+self.filetag+'.pdb -input_unbound_pdb '+self.folder+'/mini_complex_'+self.filetag+'_unb.pdb -input_ligand_pdb '+self.folder+'/mini_complex_'+self.filetag+'_lig.pdb -extra_res_fa '+self.folder+'/'+self.filetag+'.params |grep \'Scores:\' |awk \'{print $2,$3,$4}\'', shell=True, stdout= subprocess.PIPE)
             sasa = p_sasa.communicate()[0].split()
@@ -63,7 +63,7 @@ class VscreenMLFeaturizer(object):
 
 
     def calculate_component_score(self):
-        #calculating componenet scores    
+        #calculating componenet scores
         try:
             p_compo = subprocess.Popen(cfg.ROSETTA_DIR+'/main/source/bin/yusuf_interface_ddg.'+cfg.ROSETTA_BUILD+' -database '+cfg.ROSETTA_DIR+'/main/database -s '+self.folder+'/mini_complex_'+self.filetag+'.pdb -extra_res_fa '+self.folder+'/'+self.filetag+'.params -ignore_zero_occupancy false   |grep \'Component_score:\' |awk \'{print $4,$5,$6,$10,$11,$12}\'', shell=True, stdout= subprocess.PIPE)
             compo = p_compo.communicate()[0].split()
@@ -119,14 +119,14 @@ class VscreenMLFeaturizer(object):
             entropy = '-1.4'
         return entropy
 
-   
-    def calculate_chemaxon_features(self): 
+
+    def calculate_chemaxon_features(self):
         #calculating ligand descriptors
-   
+
         try:
             p_chemax = subprocess.Popen(cfg.CXCALC+' -N i logp pienergy acceptorcount donorcount fsp3 polarsurfacearea vdwsa '+self.folder+'/mini_complex_'+self.filetag+'_lig.sdf |tail -1' , shell=True, stdout= subprocess.PIPE)
             chemax = p_chemax.communicate()[0].split()
-          
+
         except:
             #use typical value (median) from the training set to impute missing value
             chemax = ['FAIL', '39.46', 'FAIL', 'FAIL', '0.28', '79.90', '468.78']
@@ -182,7 +182,7 @@ class VscreenMLAggregateFeatures(object):
         """
         features_ = VscreenMLFeaturizer(self.folder_, self.filetag_)
 
-	features_.prepare_protein_and_ligand_for_scoring()
+        features_.prepare_protein_and_ligand_for_scoring()
         features_.generate_params_file()
         self.feature_list_.extend(features_.calculate_component_score())
         self.feature_list_.extend(features_.rosetta_minimization())
@@ -196,4 +196,3 @@ class VscreenMLAggregateFeatures(object):
         return self.feature_list_
 
 #feature order['fa_atr','fa_rep','fa_sol','fa_elec','hbond_bb_sc','hbond_sc','Interface_Energy','Total_BSA','Interface_HB','Total_packstats','Interface_unsat','Total_pose_exposed_SASA','interface_hydrophobic_sasa','interface_polar_sasa','6.6','7.6','8.6','16.6','6.7','7.7','8.7','16.7','6.8','7.8','8.8','16.8','6.9','7.9','8.9','16.9','6.15','7.15','8.15','16.15','6.16','7.16','8.16','16.16','6.17','7.17','8.17','16.17','6.35','7.35','8.35','16.35','6.53','7.53','8.53','16.53','SIDE_flex_ALPHA','SIDE_flex_BETA','SIDE_flex_OTHER','BACK_flex_ALPHA','BACK_flex_BETA','BACK_flex_OTHER','TotalElec','TotalHbond','Hphobe_contact','Pi_Pi','T-stack','Cation-pi','Salt_Bridge','diff_entropy','pienergy','fsp3','polarsurfacearea','vdwsa']
-
