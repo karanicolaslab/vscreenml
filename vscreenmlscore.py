@@ -4,7 +4,6 @@ import sys
 import numpy as np
 from configuration import config as cfg
 from utilities.featurizer import VscreenMLAggregateFeatures
-from xgboost import XGBClassifier
 
 if len(sys.argv) != 3:
     print("Usage: python vscreenmlscore.py folderectory filetag_base_name ")
@@ -15,7 +14,7 @@ folder = sys.argv[1]
 filetag = sys.argv[2]
 
 data = (
-    np.array(VscreenMLAggregateFeatures(folder, filetag).vscreenml_featurize())
+    np.array(VscreenMLAggregateFeatures(folder, filetag, False).vscreenml_featurize())
     .reshape((1, -1))
     .astype(float)
 )
@@ -95,10 +94,11 @@ predictors = [
 classes = ["decoy", "active"]
 
 
-def predict(model: XGBClassifier, tag: str, input_arr: str) -> None:
+def predict(model, tag, input_arr):
     # print (input_arr)
     # print (input_arr.shape)
     prediction = model.predict(input_arr)
+    print(input_arr)
     prediction_prob = model.predict_proba(input_arr)[:, 1][0]
     print("{}\t{}\t{}".format("Name", "vscreenml_score", "Label"))
     print("{}\t{}\t{}".format(tag, prediction_prob, classes[int(prediction)]))
