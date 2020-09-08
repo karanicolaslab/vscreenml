@@ -1,35 +1,33 @@
-#! /usr/bin/env python
+"""
+This code is a python implementation of the atom counts features used in
+Ballester PJ, Mitchell JB. A machine learning approach to predicting
+protein-ligand binding affinity with applications to molecular docking.
+Bioinformatics. 2010; 26:1169-75.
+Inspiration for the CartesianPoint,Atom and Loader classes gotten from
+Durrant, J. D. and J. A. McCammon (2011). "BINANA:
+A novel algorithm for ligand-binding
+characterization." J Mol Graph Model 29(6): 888-893.
+"""
 
-# This code is a python implementation of the atom counts features used in
-# Ballester PJ, Mitchell JB. A machine learning approach to predicting protein-ligand binding affinity with applications to molecular docking. Bioinformatics. 2010; 26:1169-75.
-# Inspiration for the CartesianPoint,Atom and Loader classes gotten from Durrant, J. D. and J. A. McCammon (2011). "BINANA: A novel algorithm for ligand-binding
-# characterization." J Mol Graph Model 29(6): 888-893.
-
-
-import numpy as np
-
-# import h5py
-import fnmatch
-
-# from __future__ import print_function
 import math
-import os
-import sys
 import textwrap
+from collections import OrderedDict
+from typing import Tuple, Dict, List
 
 
 class CartesianPoint:
+    """Cartesian coordinates."""
 
-    x = 88888.0
-    y = 88888.0
-    z = 88888.0
+    x: float = 88888.0
+    y: float = 88888.0
+    z: float = 88888.0
 
-    def __init__(self, x, y, z):
+    def __init__(self, x: float, y: float, z: float) -> None:
         self.x = x
         self.y = y
         self.z = z
 
-    def distance_to(self, a_point):
+    def distance_to(self, a_point: Tuple[float, float, float]) -> float:
         return math.sqrt(
             math.pow(self.x - a_point.x, 2)
             + math.pow(self.y - a_point.y, 2)
@@ -38,20 +36,22 @@ class CartesianPoint:
 
 
 class Atom:
+    """Cartesian coordinates."""
+
     def __init__(self):
-        self.record_name = ""
-        self.atom_name = ""
-        self.residue_name = ""
-        self.coordinates = CartesianPoint(88888.0, 88888.0, 88888.0)
-        self.elem_sym = ""
-        self.pdb_index = ""
+        self.record_name: str = ""
+        self.atom_name: str = ""
+        self.residue_name: str = ""
+        self.coordinates: str = CartesianPoint(88888.0, 88888.0, 88888.0)
+        self.elem_sym: str = ""
+        self.pdb_index: str = ""
         # self.line=""
         # self.atom_type=""
-        self.atom_no = 0
-        self.res_id = 0
-        self.chain_id = ""
+        self.atom_no: str = 0
+        self.res_id: str = 0
+        self.chain_id: str = ""
 
-    def read_pdb_line(self, line):
+    def read_pdb_line(self, line: str) -> None:
         self.line = line
         self.atom_name = line[12:16].strip()
         self.coordinates = CartesianPoint(
@@ -136,7 +136,7 @@ class Atom:
             self.res_id = int(
                 line[22:26]
             )  # because it's possible the pdbqt might not have any resid entries.
-        except:
+        except IndexError:
             pass
 
         self.chain_id = line[21]
@@ -147,15 +147,15 @@ class Atom:
 
 class Loader:
     def __init__(self):
-        self.all_atoms = {}
-        self.non_protein_atoms = {}
-        self.ligand_com = CartesianPoint(88888.0, 88888.0, 88888.0)
-        self.max_x = -8888.88
-        self.min_x = 8888.88
-        self.max_y = -8888.88
-        self.min_y = 8888.88
-        self.max_z = -8888.88
-        self.min_z = 8888.88
+        self.all_atoms: Dict = {}
+        self.non_protein_atoms: Dict = {}
+        self.ligand_com: CartesianPoint = CartesianPoint(88888.0, 88888.0, 88888.0)
+        self.max_x: float = -8888.88
+        self.min_x: float = 8888.88
+        self.max_y: float = -8888.88
+        self.min_y: float = 8888.88
+        self.max_z: float = -8888.88
+        self.min_z: float = 8888.88
 
         self.protein_resnames = [
             "ALA",
@@ -190,15 +190,15 @@ class Loader:
             "VAL",
         ]
 
-    def PDBLoad(
+    def pdb_load(
         self,
-        file_name,
-        min_x=-8888.88,
-        max_x=8888.88,
-        min_y=-8888.88,
-        max_y=8888.88,
-        min_z=-8888.88,
-        max_z=8888.88,
+        file_name: str,
+        min_x: float = -8888.88,
+        max_x: float = 8888.88,
+        min_y: float = -8888.88,
+        max_y: float = 8888.88,
+        min_z: float = -8888.88,
+        max_z: float = 8888.88,
     ):
 
         auto_index = 1
@@ -210,35 +210,29 @@ class Loader:
         lines = file.readlines()
         file.close()
 
-        atom_already_loaded = (
-            []
-        )  # going to keep track of atomname_resid_chain pairs, to make sure redundants aren't loaded. This basically
-        # gets rid of rotomers, I think.
-        print file_name
+        atom_already_loaded = []
+        print(file_name)
         for t in range(0, len(lines)):
-            # print "OK"
             line = lines[t]
 
             if line[:3] == "END":
-                # print "OK"
                 t = textwrap.wrap(
                     "WARNING: END or ENDMDL encountered in "
                     + file_name
                     + ". Everyline after this will be ignored. If your PDB file has multiple pose or is an ensemble structure, split them up into individual pose or model",
                     80,
                 )
-                print "\n".join(t) + "\n"
-                print line
+                print("\n".join(t) + "\n")
+                print(line)
                 break
 
             if len(line) >= 7:
-                # print "OK"
                 if (
                     line[0:4] == "ATOM" or line[0:6] == "HETATM"
                 ):  # Load atom data (coordinates, etc.)
                     temp_atom = Atom()
                     temp_atom.read_pdb_line(line)
-                    # print "OK"
+
                     if (
                         temp_atom.coordinates.x > min_x
                         and temp_atom.coordinates.x < max_x
@@ -247,7 +241,7 @@ class Loader:
                         and temp_atom.coordinates.z > min_z
                         and temp_atom.coordinates.z < max_z
                     ):
-                        # print "OK"
+
                         if self.max_x < temp_atom.coordinates.x:
                             self.max_x = temp_atom.coordinates.x
                         if self.max_y < temp_atom.coordinates.y:
@@ -287,20 +281,19 @@ class Loader:
                             ] = temp_atom  # So you're actually reindexing everything here.
                             if not temp_atom.residue_name[-3:] in self.protein_resnames:
                                 self.non_protein_atoms[auto_index] = temp_atom
-                                # print "OK"
 
                             auto_index = auto_index + 1
 
 
 class AtomCountFeaturizer:
-    def __init__(self, complex_pdb):
-        self.complex_pdb = complex_pdb
-        self.Complex_PDB = Loader()
-        self.Complex_PDB.PDBLoad(complex_pdb)
+    def __init__(self, input_complex: str):
+        self.input_complex: str = input_complex
+        self.complex_pdb = Loader()
+        self.complex_pdb.pdb_load(self.input_complex)
 
-    def calc_feature(self):
+    def calc_feature(self) -> Dict:
 
-        feature_dict = {
+        feat_dict = {
             "6.6": 0,
             "7.6": 0,
             "8.6": 0,
@@ -377,25 +370,27 @@ class AtomCountFeaturizer:
             "8.53",
             "16.53",
         ]
+        feature_list_of_tuples = [(key, feat_dict[key]) for key in feature_list]
+        feature_dict = OrderedDict(feature_list_of_tuples)
 
         elem_interest = [6, 7, 8, 9, 15, 16, 17, 35, 53]
-        for jatom in self.Complex_PDB.non_protein_atoms:
-            for iatom in self.Complex_PDB.all_atoms:
+        for jatom in self.complex_pdb.non_protein_atoms:
+            for iatom in self.complex_pdb.all_atoms:
                 if (
-                    self.Complex_PDB.all_atoms[iatom].res_id
-                    != self.Complex_PDB.non_protein_atoms[jatom].res_id
+                    self.complex_pdb.all_atoms[iatom].res_id
+                    != self.complex_pdb.non_protein_atoms[jatom].res_id
                 ):
                     dist = 0.0
-                    dist = self.Complex_PDB.non_protein_atoms[
+                    dist = self.complex_pdb.non_protein_atoms[
                         jatom
                     ].coordinates.distance_to(
-                        self.Complex_PDB.all_atoms[iatom].coordinates
+                        self.complex_pdb.all_atoms[iatom].coordinates
                     )
                     # 12 Arngstrom distance
                     prot_atom_no = 0
                     lig_atom_no = 0
-                    lig_atom_no = self.Complex_PDB.non_protein_atoms[jatom].atom_no
-                    prot_atom_no = self.Complex_PDB.all_atoms[iatom].atom_no
+                    lig_atom_no = self.complex_pdb.non_protein_atoms[jatom].atom_no
+                    prot_atom_no = self.complex_pdb.all_atoms[iatom].atom_no
                     if dist < 12:
                         if (lig_atom_no in elem_interest) and (
                             prot_atom_no in elem_interest
@@ -405,22 +400,4 @@ class AtomCountFeaturizer:
                             key = str(key_list[1]) + "." + str(key_list[0])
                             feature_dict[key] = feature_dict.get(key, 0) + 1
 
-        for feat in feature_list:
-            print feat,
-        print "PDB"
-        for feat in feature_list:
-            print str(feature_dict[feat]),
-        print self.complex_pdb
         return feature_dict
-
-
-def exec_func(File):
-    rf = AtomCountFeaturizer(File).calc_feature()
-    return rf
-
-
-DIRIN = "/fccc/users/karanicolaslab/adeshiy"
-
-INFILE = sys.argv[1]
-
-exec_func(INFILE)
