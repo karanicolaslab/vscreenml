@@ -1,21 +1,224 @@
 #! usr/bin/python
-import os, subprocess, sys
+import os
+import re
+import subprocess
+import pandas as pd
 from configuration import config as cfg
+from rfscore_like_feature import AtomCountFeaturizer
+from typing import Tuple, List
 
 __author__ = "Yusuf Adeshina"
 __email__ = "dryusufadeshina@gmail.com"
 
+# TODO: Change string path to PoxisPath objects
+
+
+def parse_binana_file(binana_file: str) -> Tuple[float]:
+    """Parse the output file of binana.
+
+    Parameters
+    ----------
+    binana_file: str
+        binana output file
+
+    Returns
+    -------
+    Tuple[float]
+        Tuple of the extracted features
+
+    """
+    with open(binana_file, "r") as f:
+        content = f.read()
+
+    data = {}
+
+    for block in content.split("\n\n"):
+        block = block.lstrip()
+        block = block.rstrip()
+
+        if re.search("Atom-type pair counts within 2.5 angstroms:", block):
+            for line in block.split("\n"):
+                matchObj = re.search(r"Atom|.*----", line)
+                if not matchObj:
+                    k, v, p = line.split("|")
+                    k = k.strip()
+                    v = v.strip()
+                    p = p.strip()
+
+                    k_v = str(k) + "_" + "2.5A" + "_" + str(v)
+                    data[k_v] = float(p)
+
+        if re.search("Atom-type pair counts within 4.0 angstroms:", block):
+            for line in block.split("\n"):
+                matchObj = re.search(r"Atom|.*----", line)
+                if not matchObj:
+                    k, v, p = line.split("|")
+                    k = k.strip()
+                    v = v.strip()
+                    p = p.strip()
+                    k_v = str(k) + "_" + "4.0A" + "_" + str(v)
+                    data[k_v] = float(p)
+
+        if re.search("Summed electrostatic energy by atom-type pair", block):
+            TotalElec = 0.0
+            for line in block.split("\n"):
+                matchObj = re.search(r"Summed|Atom|.*----", line)
+                if not matchObj:
+                    k, v, p = line.split("|")
+                    k = k.strip()
+                    v = v.strip()
+                    p = p.strip()
+                    k_v = str(k) + "_" + "Elec" + "_" + str(v)
+                    TotalElec += float(p)
+            data["TotalElec"] = TotalElec
+
+        if re.search("Number of rotatable bonds in the ligand:", block):
+            for line in block.split("\n"):
+
+                v, p = line.split(":")
+                v = v.strip()
+                p = p.strip()
+                k_v = "RotBond"
+
+                data[k_v] = float(p)
+
+        if re.search("Active-site flexibility:", block):
+            for line in block.split("\n"):
+                matchObj = re.search(r"Active-site|Sidechain/Backbone|.*----", line)
+                if not matchObj:
+                    k, v, p = line.split("|")
+                    k = k.strip()
+                    v = v.strip()
+                    p = p.strip()
+
+                    k_v = str(k) + "_" + "flex" + "_" + str(v)
+                    data[k_v] = float(p)
+
+        if re.search("Hydrogen bonds:", block):
+            TotalHbond = 0.0
+            for line in block.split("\n"):
+                matchObj = re.search(r"Hydrogen bonds|Location of Donor|.*----", line)
+                if not matchObj:
+                    r, k, v, p = line.split("|")
+                    r = r.strip()
+                    k = k.strip()
+                    v = v.strip()
+                    p = p.strip()
+
+                    k_v = str(r) + "_" + str(k) + "_" + str(v) + "Hbond"
+                    TotalHbond += float(p)
+            data["TotalHbond"] = TotalHbond
+
+        if re.search("Hydrophobic contacts", block):
+            TotalHphob = 0.0
+            for line in block.split("\n"):
+                matchObj = re.search(
+                    r"Hydrophobic contacts|Sidechain/Backbone|.*----", line
+                )
+                if not matchObj:
+                    k, v, p = line.split("|")
+                    k = k.strip()
+                    v = v.strip()
+                    p = p.strip()
+
+                    k_v = str(k) + "_" + "Hphob" + "_" + str(v)
+                    TotalHphob += float(p)
+            data["Hphob"] = TotalHphob
+
+        if re.search("pi-pi stacking interactions:", block):
+            TotalPipi = 0.0
+            for line in block.split("\n"):
+                matchObj = re.search(r"pi-pi|Secondary Structure|.*----", line)
+                if not matchObj:
+                    v, p = line.split("|")
+                    v = v.strip()
+                    p = p.strip()
+                    k_v = str(v) + "_" + "Pipi"
+                    TotalPipi += float(p)
+            data["Pipi"] = TotalPipi
+
+        if re.search("T-stacking (face-to-edge) interactions:", block):
+            TotalTstac = 0.0
+            for line in block.split("\n"):
+                matchObj = re.search(r"T-stacking|Secondary Structure|.*----", line)
+                if not matchObj:
+                    v, p = line.split("|")
+                    v = v.strip()
+                    p = p.strip()
+
+                    k_v = str(v) + "_" + "Tstac"
+                    TotalTstac += float(p)
+            data["Tstac"] = TotalTstac
+
+        if re.search("Cation-pi interactions:", block):
+            TotalCapi = 0.0
+            for line in block.split("\n"):
+                matchObj = re.search(r"Cation-pi|Secondary Structure|.*----", line)
+                if not matchObj:
+                    k, v, p = line.split("|")
+                    k = k.strip()
+                    v = v.strip()
+                    p = p.strip()
+                    k_v = str(k) + "_" + "Capi" + "_" + str(v)
+                    TotalCapi += float(p)
+            data["Capi"] = TotalCapi
+
+        if re.search("Salt Bridges:", block):
+            TotalSalt = 0.0
+            for line in block.split("\n"):
+                matchObj = re.search(r"Salt Bridges:|Secondary Structure|.*----", line)
+                if not matchObj:
+                    v, p = line.split("|")
+                    v = v.strip()
+                    p = p.strip()
+                    k_v = str(v) + "_" + "Salt"
+                    TotalSalt += float(p)
+            data["Salt"] = TotalSalt
+
+    return (
+        data.get("SIDECHAIN_flex_ALPHA", 0.0),
+        data.get("SIDECHAIN_flex_BETA", 0.0),
+        data.get("SIDECHAIN_flex_OTHER", 0.0),
+        data.get("BACKBONE_flex_ALPHA", 0.0),
+        data.get("BACKBONE_flex_BETA", 0.0),
+        data.get("BACKBONE_flex_OTHER", 0.0),
+        data.get("TotalElec", 0.0),
+        data.get("TotalHbond", 0.0),
+        data.get("Hphob", 0.0),
+        data.get("Pipi", 0.0),
+        data.get("Tstac", 0.0),
+        data.get("Capi", 0.0),
+        data.get("Salt", 0.0),
+    )
+
 
 class VscreenMLFeaturizer(object):
-    def __init__(self, folder, filetag):
-        # initializing the class
+    "This featurizes protein-ligand complexes for vscreenml scoring"
+
+    def __init__(self, folder: str, filetag: str) -> None:
+        """Initialize class.
+
+        Parameters
+        ----------
+        folder: str
+            string of the path of the working directory
+
+        filetag: str
+            file tag. The input pdbs should be formatted
+            as mini_complex_{tagfile}.pdb
+
+        Returns
+        -------
+        None
+
+        """
         self.filetag = filetag
         self.folder = folder
         self.feature_list = []
-        self.purpose = "This featurizes protein-ligand complexes for vscreenml scoring"
 
-    def prepare_protein_and_ligand_for_scoring(self):
-        # Extract ligands and protein structures
+    def prepare_protein_and_ligand_for_scoring(self) -> None:
+        """"Extract ligands and protein structures."""
+
         p = subprocess.Popen(
             'grep -E "ATOM|ZN|MG|MN" '
             + self.folder
@@ -37,7 +240,7 @@ class VscreenMLFeaturizer(object):
             shell=True,
         )
 
-        p.wait()
+        p.communicate()
 
         # reformatting the ligands
         p = subprocess.Popen(
@@ -50,14 +253,13 @@ class VscreenMLFeaturizer(object):
             + self.folder
             + "/mini_complex_"
             + self.filetag
-            + "_lig1.sdf >/dev/null 2>&1",
+            + "_lig1.sdf",  # >/dev/null 2>&1",
             shell=True,
         )
-        p.wait()
 
         p = subprocess.Popen(
             cfg.CHEMAXON
-            + '/structure-representation-toolkit/bin/structurecheck -c "valenceerror" -m fix -f sdf -o '
+            + '/bin/structurecheck -c "valenceerror" -m fix -f sdf -o '
             + self.folder
             + "/mini_complex_"
             + self.filetag
@@ -68,27 +270,19 @@ class VscreenMLFeaturizer(object):
             + "_lig1.sdf",
             shell=True,
         )
-        p.wait()
+        p.communicate()
 
-    def generate_params_file(self):
-        # generating params filetag
-        p = subprocess.Popen(
-            cfg.ROSETTA_DIR
-            + "/main/source/scripts/python/public/molfile_to_params.py "
-            + self.folder
-            + "/mini_complex_"
-            + self.filetag
-            + "_lig1.sdf -p "
-            + self.folder
-            + "/"
-            + self.filetag
-            + " >/dev/null 2>&1",
-            shell=True,
-        )
-        p.wait()
+    def rosetta_minimization(self) -> Tuple[str]:
+        #
+        """Score Rosetta pre-minimized complex
 
-    def rosetta_minimization(self):
-        # minimization of the complex
+        Returns
+        -------
+        Tuple[str]
+            Tuple of Rosetta interface scores and other non-canonical rosetta
+            features
+
+        """
         try:
             p_rosetta = subprocess.Popen(
                 cfg.ROSETTA_DIR
@@ -104,22 +298,26 @@ class VscreenMLFeaturizer(object):
                 + self.filetag
                 + ".params -database "
                 + cfg.ROSETTA_DIR
-                + "/main/database -ignore_zero_occupancy false -score_only |grep 'Interface_Scores:mini' |awk '{print $4,$5,$6,$7,$8}' ",
+                + "/main/database -ignore_zero_occupancy false -score_only \
+                |grep 'Interface_Scores:mini' |awk '{print $4,$5,$6,$7,$8}' ",
                 shell=True,
                 stdout=subprocess.PIPE,
             )
             rosetta = p_rosetta.communicate()[0].split()
 
-        except:
-            # use typical value (median) from the training set to impute missing value
+        except OSError:
             rosetta = ["-23.6933", "719.7050", "1.0000", "0.6410", "4.0000"]
 
-        # print(rosetta)
-        # Interface_Energy = rosetta[0], Total_BSA = rosetta[1], Interface_HB = rosetta[2], Total_packstats = rosetta[3], #Interface_unsat =rosetta[4]
         return rosetta[0], rosetta[1], rosetta[2], rosetta[3], rosetta[4]
 
-    def calculate_sasa(self):
-        # calculating sasa
+    def calculate_sasa(self) -> Tuple[str]:
+        """Calculate theta-lig features.
+
+        Returns
+        -------
+        Tuple of theta-lig features
+
+        """
         try:
             p_sasa = subprocess.Popen(
                 cfg.ROSETTA_DIR
@@ -149,19 +347,25 @@ class VscreenMLFeaturizer(object):
             )
             sasa = p_sasa.communicate()[0].split()
 
-        except:
+        except OSError:
             # use typical value (median) from the training set to impute missing value
             sasa = ["0.3304", "0.7138", "0.2867"]
 
-        # Total_pose_exposed_SASA = sasa[0], interface_hydrophobic_sasa = sasa[1], interface_polar_sasa = sasa[2]
         return sasa[0], sasa[1], sasa[2]
 
-    def calculate_component_score(self):
-        # calculating componenet scores
+    def calculate_component_score(self) -> Tuple[str]:
+        """Calculate Rosetta componenet scores
+
+        Returns
+        -------
+        Tuple[str]
+            Tuple of components scores
+
+        """
         try:
             p_compo = subprocess.Popen(
                 cfg.ROSETTA_DIR
-                + "/main/source/bin/yusuf_interface_ddg."
+                + "/main/source/bin/vscrenml_interface_ddg."
                 + cfg.ROSETTA_BUILD
                 + " -database "
                 + cfg.ROSETTA_DIR
@@ -173,21 +377,22 @@ class VscreenMLFeaturizer(object):
                 + self.folder
                 + "/"
                 + self.filetag
-                + ".params -ignore_zero_occupancy false   |grep 'Component_score:' |awk '{print $4,$5,$6,$10,$11,$12}'",
+                + ".params -ignore_zero_occupancy false  \
+                 |grep 'Component_score:' |awk '{print $4,$5,$6,$10,$11,$12}'",
                 shell=True,
                 stdout=subprocess.PIPE,
             )
             compo = p_compo.communicate()[0].split()
 
-        except:
+        except OSError:
             # use typical value (median) from the training set to impute missing value
             compo = ["-28.0043", "6.45592", "7.77609", "-4.8185", "0.0000", "0.0000"]
 
-        # fa_atr = compo[0], fa_rep = compo[1], fa_sol = compo[2], fa_elec = compo[3], hbond_bb_sc = compo[4], hbond_sc= compo[5]
         return compo[0], compo[1], compo[2], compo[3], compo[4], compo[5]
 
-    def generate_dot_pdbqt_files(self):
-        # generating .pdbqt filetags for cfg.BINANA features
+    def generate_dot_pdbqt_files(self) -> None:
+        """Generate .pdbqt filetags for cfg.BINANA features"""
+
         p = subprocess.Popen(
             cfg.MGLTOOLS
             + "/bin/pythonsh "
@@ -222,13 +427,19 @@ class VscreenMLFeaturizer(object):
         )
         p.wait()
 
-    def generate_binana_features(self):
-        # calculating cfg.BINANA features
+    def generate_binana_features(self) -> Tuple[str]:
+        """Calculate binana features.
+
+        Returns
+        -------
+        Tuple of binana features
+
+        """
         try:
             p = subprocess.Popen(
                 "python "
                 + cfg.BINANA
-                + "/binana_1_2_0.py -receptor "
+                + "/binana.py  -receptor "
                 + self.folder
                 + "/mini_complex_"
                 + self.filetag
@@ -243,20 +454,13 @@ class VscreenMLFeaturizer(object):
                 + "_binana.out",
                 shell=True,
             )
-            p.wait()
-            p_binana = subprocess.Popen(
-                "python "
-                + cfg.BINANA
-                + "/parse_binana.py "
-                + self.folder
-                + "/mini_complex_"
-                + self.filetag
-                + "_binana.out",
-                shell=True,
-                stdout=subprocess.PIPE,
+            p.communicate()
+
+            binana = parse_binana_file(
+                self.folder + "/mini_complex_" + self.filetag + "_binana.out"
             )
-            binana = p_binana.communicate()[0].split()
-        except:
+
+        except (OSError, FileNotFoundError):
             # use typical value (median) from the training set to impute missing value
             binana = [
                 "5",
@@ -273,8 +477,6 @@ class VscreenMLFeaturizer(object):
                 "0",
                 "0",
             ]
-
-        # SIDE_flex_ALPHA = binana[0], SIDE_flex_BETA= binana[1], SIDE_flex_OTHER=binana[2], BACK_flex_ALPHA= binana[3], BACK_flex_BETA= binana[4], BACK_flex_OTHER= binana[5], TotalElec= binana[6], TotalHbond= binana[7], Hphobe_contact= binana[8], Pi_Pi= binana[9], Tstack= binana[10], Cationpi= binana[11], Salt_Bridge= binana[12]
         return (
             binana[0],
             binana[1],
@@ -291,8 +493,15 @@ class VscreenMLFeaturizer(object):
             binana[12],
         )
 
-    def calculate_szybki(self):
+    def calculate_szybki(self) -> str:
         # generating cfg.OMEGA conformers for entropy calculations
+        """Calculate Szybki features.
+
+        Returns
+        -------
+        Tuple of Szybki features
+
+        """
         p = subprocess.Popen(
             cfg.OMEGA
             + " -in "
@@ -303,27 +512,48 @@ class VscreenMLFeaturizer(object):
             + self.folder
             + "/"
             + self.filetag
-            + ".oeb.gz -strictstereo false -strictatomtyping false -warts true -maxconfs 1000 -rms 0.1 >/dev/null 2>&1",
+            + ".oeb.gz -strictstereo false -strictatomtyping false -warts true -maxconfs 1000 -rms 0.1  >/dev/null 2>&1",
             shell=True,
         )
-        p.wait()
 
         try:
+            # p = subprocess.Popen(
+            #    cfg.SZYBKI
+            #    + " -entropy AN  -prefix "
+            #    + self.folder
+            #    + "/bou_"
+            #    + self.filetag
+            #    + " -complex "
+            #    + self.folder
+            #    + "/mini_complex_"
+            #    + self.filetag
+            #    + ".pdb -strict false >/dev/null 2>&1",
+            #    shell=True,
+            #    stdout=subprocess.PIPE,
+            # )
+
+            # versions other than 1.9.0.3 follows this convention
             p = subprocess.Popen(
                 cfg.SZYBKI
                 + " -entropy AN  -prefix "
                 + self.folder
                 + "/bou_"
                 + self.filetag
-                + " -complex "
+                + " -p "
                 + self.folder
                 + "/mini_complex_"
                 + self.filetag
-                + ".pdb -strict false >/dev/null 2>&1",
+                + "_unb.pdb -strict false"
+                + " "
+                + self.folder
+                + "/mini_complex_"
+                + self.filetag
+                + "_lig.sdf ",  # >/dev/null 2>&1",
                 shell=True,
                 stdout=subprocess.PIPE,
             )
-            p.wait()
+            p.communicate()
+
             p = subprocess.Popen(
                 cfg.SZYBKI
                 + " -entropy AN  -prefix "
@@ -338,7 +568,7 @@ class VscreenMLFeaturizer(object):
                 shell=True,
                 stdout=subprocess.PIPE,
             )
-            p.wait()
+            p.communicate()
 
             p_bound = subprocess.Popen(
                 "grep 'At T=298.15 K,' "
@@ -350,7 +580,6 @@ class VscreenMLFeaturizer(object):
                 stdout=subprocess.PIPE,
             )
             bound = p_bound.communicate()[0].split()[0]
-
             p_unbound = subprocess.Popen(
                 "grep 'At T=298.15 K,' "
                 + self.folder
@@ -362,13 +591,21 @@ class VscreenMLFeaturizer(object):
             )
             unbound = p_unbound.communicate()[0].split()[0]
             entropy = float(bound) - float(unbound)
-        except:
+            entropy = "0.0"
+        except OSError:
             # use typical value (median) from the training set to impute missing value
             entropy = "-1.4"
         return entropy
 
-    def calculate_chemaxon_features(self):
-        # calculating ligand descriptors
+    def calculate_chemaxon_features(self) -> Tuple[str]:
+        """Calculate Chemaxon ligand descriptors features.
+
+        Returns
+        -------
+        Tuple[str]
+            Tuple of ligand descriptors
+
+        """
 
         try:
             p_chemax = subprocess.Popen(
@@ -377,117 +614,25 @@ class VscreenMLFeaturizer(object):
                 + self.folder
                 + "/mini_complex_"
                 + self.filetag
-                + "_lig.sdf |tail -1",
+                + "_lig1.sdf |tail -1",
                 shell=True,
                 stdout=subprocess.PIPE,
             )
             chemax = p_chemax.communicate()[0].split()
-
-        except:
+        except OSError:
             # use typical value (median) from the training set to impute missing value
             chemax = ["FAIL", "39.46", "FAIL", "FAIL", "0.28", "79.90", "468.78"]
 
-        # logp= chemax[0], pienergy= chemax[1], acceptorcount= chemax[2], donorcount= chemax[3], fsp3= chemax[4], polarsurfacearea= chemax[5], vdwsa = chemax[6]
         return chemax[1], chemax[4], chemax[5], chemax[6]
 
-    def calculate_rfscore_like_features(self):
-        # calculating rfscore
-        try:
-            p_rfscore = subprocess.Popen(
-                "python  "
-                + cfg.VSCREENML
-                + "/rfscore_like_feature.py "
-                + self.folder
-                + "/mini_complex_"
-                + self.filetag
-                + ".pdb |tail -1 ",
-                shell=True,
-                stdout=subprocess.PIPE,
-            )
-            rfscore = p_rfscore.communicate()[0].split()
+    def calculate_rfscore_like_features(self) -> List[str]:
+        filename = self.folder + "/mini_complex_" + self.filetag + ".pdb"
+        feat_dict = AtomCountFeaturizer(filename).calc_feature()
+        feat_df = pd.DataFrame.from_dict(feat_dict, orient="index")
+        return feat_df.T.values.tolist()[0]
 
-        except:
-            # use typical value (median) from the training set to impute missing value
-            rfscore = [
-                "2884",
-                "743",
-                "805",
-                "27",
-                "490",
-                "128",
-                "139",
-                "4",
-                "390",
-                "99",
-                "108",
-                "3",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-            ]
-
-        # order of features '6.6','7.6','8.6','16.6','6.7','7.7','8.7','16.7','6.8','7.8','8.8','16.8','6.9','7.9','8.9','16.9','6.15','7.15','8.15','16.15','6.16','7.16','8.16','16.16','6.17','7.17','8.17','16.17','6.35','7.35','8.35','16.35','6.53','7.53','8.53','16.53'
-        return (
-            rfscore[0],
-            rfscore[1],
-            rfscore[2],
-            rfscore[3],
-            rfscore[4],
-            rfscore[5],
-            rfscore[6],
-            rfscore[7],
-            rfscore[8],
-            rfscore[9],
-            rfscore[10],
-            rfscore[11],
-            rfscore[12],
-            rfscore[13],
-            rfscore[14],
-            rfscore[15],
-            rfscore[16],
-            rfscore[17],
-            rfscore[18],
-            rfscore[19],
-            rfscore[20],
-            rfscore[21],
-            rfscore[22],
-            rfscore[23],
-            rfscore[24],
-            rfscore[25],
-            rfscore[26],
-            rfscore[27],
-            rfscore[28],
-            rfscore[29],
-            rfscore[30],
-            rfscore[31],
-            rfscore[32],
-            rfscore[33],
-            rfscore[34],
-            rfscore[35],
-        )
-
-    def clean_up(self):
+    def clean_up(self) -> None:
+        """Clean up by deleting files."""
         os.remove(self.folder + "/" + self.filetag + ".params")
         os.remove(self.folder + "/" + self.filetag + "_0001.pdb")
         os.remove(self.folder + "/mini_complex_" + self.filetag + "_lig1.sdf")
@@ -504,35 +649,61 @@ class VscreenMLFeaturizer(object):
         os.remove(self.folder + "/unb_" + self.filetag + ".log")
         os.remove(self.folder + "/unb_" + self.filetag + "_out.oeb")
         os.remove(self.folder + "/unb_" + self.filetag + ".status")
-        os.remove(self.folder + "/unb_" + self.filetag + ".param")
+        # os.remove(self.folder + "/unb_" + self.filetag + ".param")
 
 
 class VscreenMLAggregateFeatures(object):
-    def __init__(self, folder_, filetag_):
-        # initializing the class
-        self.filetag_ = filetag_
-        self.folder_ = folder_
-        self.feature_list_ = []
-        self.purpose_ = "This featurizes protein-ligand complexes for vscreenml scoring"
+    "This featurizes protein-ligand complexes for vscreenml scoring"
 
-    def vscreenml_featurize(self):
+    def __init__(self, folder: str, filetag: str, clean_up: bool = False) -> None:
+        """Initialize class.
+
+        Parameters
+        ----------
+        folder: str
+            string of the path of the working directory
+
+        filetag: str
+            file tag. The input pdbs should be formatted
+            as mini_complex_{tagfile}.pdb
+
+        Returns
+        -------
+        None
+
         """
-        This function computes the overall vscreenml features
+        self.filetag = filetag
+        self.folder = folder
+        self.feature_list: List = []
+        self.clean_up = clean_up
+
+    def vscreenml_featurize(self) -> List[str]:
+        """Get overall vscreenml features.
+
+        Returns
+        -------
+        List[str]
+            Tuple of the extracted features
+
         """
-        features_ = VscreenMLFeaturizer(self.folder_, self.filetag_)
+        features = VscreenMLFeaturizer(self.folder, self.filetag)
 
-        features_.prepare_protein_and_ligand_for_scoring()
-        features_.generate_params_file()
-        self.feature_list_.extend(features_.calculate_component_score())
-        self.feature_list_.extend(features_.rosetta_minimization())
-        self.feature_list_.extend(features_.calculate_sasa())
-        self.feature_list_.extend(features_.calculate_rfscore_like_features())
-        features_.generate_dot_pdbqt_files()
-        self.feature_list_.extend(features_.generate_binana_features())
-        self.feature_list_.append(features_.calculate_szybki())
-        self.feature_list_.extend(features_.calculate_chemaxon_features())
-        features_.clean_up()
-        return self.feature_list_
+        features.prepare_protein_and_ligand_for_scoring()
+        self.feature_list.extend(features.calculate_component_score())
+        self.feature_list.extend(features.rosetta_minimization())
+        self.feature_list.extend(features.calculate_sasa())
+        self.feature_list.extend(features.calculate_rfscore_like_features())
+        features.generate_dot_pdbqt_files()
+        self.feature_list.extend(features.generate_binana_features())
+        self.feature_list.append(features.calculate_szybki())
+        self.feature_list.extend(features.calculate_chemaxon_features())
+        if self.clean_up:
+            features.clean_up()
+        return self.feature_list
 
 
-# feature order['fa_atr','fa_rep','fa_sol','fa_elec','hbond_bb_sc','hbond_sc','Interface_Energy','Total_BSA','Interface_HB','Total_packstats','Interface_unsat','Total_pose_exposed_SASA','interface_hydrophobic_sasa','interface_polar_sasa','6.6','7.6','8.6','16.6','6.7','7.7','8.7','16.7','6.8','7.8','8.8','16.8','6.9','7.9','8.9','16.9','6.15','7.15','8.15','16.15','6.16','7.16','8.16','16.16','6.17','7.17','8.17','16.17','6.35','7.35','8.35','16.35','6.53','7.53','8.53','16.53','SIDE_flex_ALPHA','SIDE_flex_BETA','SIDE_flex_OTHER','BACK_flex_ALPHA','BACK_flex_BETA','BACK_flex_OTHER','TotalElec','TotalHbond','Hphobe_contact','Pi_Pi','T-stack','Cation-pi','Salt_Bridge','diff_entropy','pienergy','fsp3','polarsurfacearea','vdwsa']
+if __name__ == "__main__":
+    folder = "/Users/yusufadeshina/vscreenml/data"
+    filetag = "Z2488751527_29"
+    feat = VscreenMLFeaturizer(folder, filetag, False)
+    feat.generate_binana_features()
